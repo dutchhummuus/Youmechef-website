@@ -96,7 +96,7 @@
   <section id="waitlist" class="waitlist">
     <h2>Be first to cook with it</h2>
     <p>Youmechef is in private beta. Leave your email and we will let you in.</p>
-    <form class="signup" action="https://formsubmit.co/david.mo.brini@gmail.com" method="POST">
+    <form class="signup" id="signup" data-inbox="ZGF2aWQubW8uYnJpbmlAZ21haWwuY29t" method="POST">
       <input type="hidden" name="_subject" value="New Youmechef waitlist signup">
       <input type="hidden" name="_captcha" value="false">
       <label class="sr-only" for="email">Email address</label>
@@ -115,6 +115,13 @@
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Address is base64'd only to keep plain-text scrapers off it, and the action
+  // is set at submit time so it never sits in the served markup.
+  var signup = document.getElementById('signup');
+  signup.addEventListener('submit', function () {
+    signup.action = 'https://formsubmit.co/' + atob(signup.dataset.inbox);
+  });
 </script>
 
 </body>

@@ -21,6 +21,13 @@ Pushing to `main` publishes to GitHub Pages. No workflow needed, Pages serves th
 ## Waitlist form
 
 The email form posts to FormSubmit, which forwards to david.mo.brini@gmail.com.
-The first submission triggers a one-time confirmation email from FormSubmit that
-must be clicked before entries arrive. To swap providers, change the `action`
-on the form in `index.html`.
+
+**Activate it before launch.** Submit the form once yourself on the live site.
+FormSubmit replies with a one-time confirmation email, and entries only start
+arriving after you click that link.
+
+The destination address is base64'd in `data-inbox` and the form `action` is set
+at submit time, so the address is not in the served markup for scrapers to find.
+This means the form needs JavaScript. To remove that dependency, activate the
+address at formsubmit.co, then put the hashed endpoint they give you straight in
+`action` and delete the submit handler.
