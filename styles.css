@@ -136,6 +136,19 @@ img { max-width: 100%; height: auto; }
   flex-wrap: wrap;
 }
 .nav nav a:not(.btn) { color: var(--green-muted); }
+.lang {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--green) !important;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 5px 11px;
+}
+.lang:hover {
+  background: var(--green-tint);
+  text-decoration: none;
+}
 
 /* Hero */
 

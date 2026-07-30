@@ -4,15 +4,22 @@ Marketing site for Youmechef. Static HTML and CSS, no build step.
 
 ## Files
 
-- `index.html` — the whole page
-- `styles.css` — brand palette, copied from the mobile app's `lib/theme.ts`
+- `index.html` — Dutch page, the default at `/`
+- `en/index.html` — English page at `/en/`
+- `styles.css` — shared by both, brand palette copied from the mobile app's `lib/theme.ts`
 - `assets/` — logo and favicon, taken from the mobile app icon
+
+Both pages share one stylesheet. Edit copy in both when it changes, and keep the
+`hreflang` links in each `<head>` pointing at the other.
 
 ## Preview locally
 
-Open `index.html` in a browser, or serve it:
+Note that `python` on this machine is the broken Microsoft Store stub, so use node:
 
-    python -m http.server 8000
+    npx --yes http-server . -p 8000
+
+Opening `index.html` directly as a `file://` URL also works, but the `/en/` link
+needs a real server to resolve the directory index.
 
 ## Deploy
 
