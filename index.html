@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Youmechef | Plan your week, cook real food</title>
+<meta name="description" content="Youmechef turns any recipe into a week plan and a single grocery order. Snap it, upload it, or type it.">
+<meta property="og:title" content="Youmechef">
+<meta property="og:description" content="Plan your week. Cook real food. One order, no waste.">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/favicon.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav">
+  <a class="brand" href="#top">
+    <img src="assets/logo.png" alt="" width="36" height="36">
+    <span>Youmechef</span>
+  </a>
+  <nav>
+    <a href="#how">How it works</a>
+    <a href="#features">Features</a>
+    <a class="btn btn-small" href="#waitlist">Get early access</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="hero-copy">
+      <h1>Plan your week.<br>Cook real food.</h1>
+      <p class="lead">Pick your recipes. Youmechef builds the plan and turns it into one grocery order.</p>
+      <div class="cta-row">
+        <a class="btn" href="#waitlist">Get early access</a>
+        <a class="btn btn-ghost" href="#how">See how it works</a>
+      </div>
+      <p class="micro">Free while in beta. Delivery or pickup.</p>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <div class="bulb"><img src="assets/logo.png" alt="" width="200" height="200"></div>
+    </div>
+  </section>
+
+  <section id="how" class="steps">
+    <h2>Three steps to dinner</h2>
+    <ol class="step-grid">
+      <li>
+        <span class="step-num">1</span>
+        <h3>Add a recipe</h3>
+        <p>Browse our catalogue, or bring your own. Snap a photo, upload a file, or type it out.</p>
+      </li>
+      <li>
+        <span class="step-num">2</span>
+        <h3>Build your week</h3>
+        <p>Drop meals onto the days you want them. Portions scale to your household.</p>
+      </li>
+      <li>
+        <span class="step-num">3</span>
+        <h3>Get one order</h3>
+        <p>Every ingredient in one basket. Nothing doubled, nothing left to rot.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section id="features" class="features">
+    <h2>What you get</h2>
+    <div class="feature-grid">
+      <article>
+        <h3>Your recipes, understood</h3>
+        <p>Photo, screenshot, or plain text. We read it and match the ingredients for you.</p>
+      </article>
+      <article>
+        <h3>Real portions</h3>
+        <p>Set how many people eat. Quantities follow.</p>
+      </article>
+      <article>
+        <h3>One basket</h3>
+        <p>Shared ingredients get merged across the week.</p>
+      </article>
+      <article>
+        <h3>Delivery or pickup</h3>
+        <p>Have it brought over, or collect it yourself.</p>
+      </article>
+      <article>
+        <h3>Reorder in a tap</h3>
+        <p>Loved that week? Run it again.</p>
+      </article>
+      <article>
+        <h3>Your data stays yours</h3>
+        <p>Export it or delete it whenever you like.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="waitlist" class="waitlist">
+    <h2>Be first to cook with it</h2>
+    <p>Youmechef is in private beta. Leave your email and we will let you in.</p>
+    <form class="signup" action="https://formsubmit.co/david.mo.brini@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="New Youmechef waitlist signup">
+      <input type="hidden" name="_captcha" value="false">
+      <label class="sr-only" for="email">Email address</label>
+      <input id="email" type="email" name="email" placeholder="you@example.com" required autocomplete="email">
+      <button class="btn" type="submit">Join the waitlist</button>
+    </form>
+    <p class="micro">No spam. One email when your invite is ready.</p>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>Youmechef</p>
+  <p class="micro">&copy; <span id="year">2026</span> Youmechef. All rights reserved.</p>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
