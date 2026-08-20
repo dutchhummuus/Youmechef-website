@@ -617,6 +617,36 @@ img { max-width: 100%; height: auto; }
 }
 .signup input::placeholder { color: var(--text-muted); }
 
+/* Legal pages */
+
+.legal {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 24px 24px 80px;
+}
+.legal h1 {
+  font-size: clamp(30px, 5vw, 42px);
+  margin-bottom: 10px;
+}
+.legal .updated {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 36px;
+}
+.legal h2 {
+  font-size: 22px;
+  margin: 34px 0 10px;
+}
+.legal p, .legal li {
+  color: var(--text);
+  font-size: 16px;
+}
+.legal ul {
+  margin: 10px 0 0;
+  padding-left: 22px;
+}
+.legal a { text-decoration: underline; }
+
 /* Footer */
 
 .footer {
@@ -625,6 +655,11 @@ img { max-width: 100%; height: auto; }
   padding: 36px 24px;
   text-align: center;
 }
+.footer a {
+  color: rgba(253, 251, 246, 0.75);
+  text-decoration: underline;
+}
+.footer a:hover { color: var(--text-on-green); }
 .footer p:first-child {
   font-family: var(--serif);
   font-size: 19px;

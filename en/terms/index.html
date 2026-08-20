@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Youmechef | Terms</title>
+<meta name="description" content="The Youmechef terms of service.">
+<link rel="icon" href="../../assets/favicon.png">
+<link rel="canonical" href="https://dutchhummuus.github.io/Youmechef-website/en/terms/">
+<link rel="alternate" hreflang="nl" href="https://dutchhummuus.github.io/Youmechef-website/voorwaarden/">
+<link rel="alternate" hreflang="en" href="https://dutchhummuus.github.io/Youmechef-website/en/terms/">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+
+<header class="nav">
+  <a class="brand" href="../">
+    <img src="../../assets/logo.png" alt="" width="36" height="36">
+    <span>Youmechef</span>
+  </a>
+  <nav>
+    <a href="../">Back to home</a>
+    <a class="lang" href="../../voorwaarden/" hreflang="nl" lang="nl">NL</a>
+  </nav>
+</header>
+
+<main class="legal">
+  <h1>Terms</h1>
+  <p class="updated">Last updated: August 20, 2026</p>
+
+  <h2>About Youmechef</h2>
+  <p>Youmechef is a meal service in Utrecht, currently in beta. You pick recipes and we weigh every ingredient exactly.</p>
+
+  <h2>Ordering</h2>
+  <p>You pay per order. There is no subscription and no minimum. An order is final once you have paid.</p>
+
+  <h2>Prices</h2>
+  <p>Portions start at &euro;4,50. You always see the total before you pay.</p>
+
+  <h2>Pickup</h2>
+  <p>You collect your order at De Pers in Utrecht, at the time you choose. Can't make it? Mail us as soon as possible.</p>
+
+  <h2>Fresh produce</h2>
+  <p>We work with fresh, perishable produce weighed out just for you. A prepared order can therefore not be withdrawn. Something wrong with your order? <a href="#" class="mailto" data-inbox="ZGF2aWQubW8uYnJpbmlAZ21haWwuY29t">Mail us</a> and we will fix it.</p>
+
+  <h2>Allergens</h2>
+  <p>Recipes may contain allergens. Always check the labels of the delivered products.</p>
+
+  <h2>Liability</h2>
+  <p>Our liability is limited to the amount of your order, except where the law says otherwise.</p>
+
+  <h2>Law</h2>
+  <p>These terms are governed by Dutch law.</p>
+</main>
+
+<footer class="footer">
+  <p>Youmechef</p>
+  <p class="micro"><a href="../privacy/">Privacy</a> &middot; <a href="./">Terms</a></p>
+  <p class="micro">&copy; <span id="year">2026</span> Youmechef. All rights reserved.</p>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  // Address is base64'd to keep plain-text scrapers off it.
+  document.querySelectorAll('.mailto').forEach(function (a) {
+    a.href = 'mailto:' + atob(a.dataset.inbox);
+  });
+</script>
+
+</body>
+</html>

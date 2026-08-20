@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Youmechef | Privacy</title>
+<meta name="description" content="How Youmechef handles your data.">
+<link rel="icon" href="../../assets/favicon.png">
+<link rel="canonical" href="https://dutchhummuus.github.io/Youmechef-website/en/privacy/">
+<link rel="alternate" hreflang="nl" href="https://dutchhummuus.github.io/Youmechef-website/privacy/">
+<link rel="alternate" hreflang="en" href="https://dutchhummuus.github.io/Youmechef-website/en/privacy/">
+<link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+
+<header class="nav">
+  <a class="brand" href="../">
+    <img src="../../assets/logo.png" alt="" width="36" height="36">
+    <span>Youmechef</span>
+  </a>
+  <nav>
+    <a href="../">Back to home</a>
+    <a class="lang" href="../../privacy/" hreflang="nl" lang="nl">NL</a>
+  </nav>
+</header>
+
+<main class="legal">
+  <h1>Privacy</h1>
+  <p class="updated">Last updated: August 20, 2026</p>
+
+  <h2>Who we are</h2>
+  <p>Youmechef is a meal service in Utrecht. Questions about privacy? <a href="#" class="mailto" data-inbox="ZGF2aWQubW8uYnJpbmlAZ21haWwuY29t">Mail us</a>.</p>
+
+  <h2>What we collect</h2>
+  <p>On this website only your email address, when you join the waitlist. This site uses no cookies, no analytics, and no trackers.</p>
+
+  <h2>What we use it for</h2>
+  <p>We mail you when your invite is ready and send an occasional launch update. We never sell your data.</p>
+
+  <h2>Who processes it</h2>
+  <ul>
+    <li>FormSubmit delivers the waitlist form to our inbox.</li>
+    <li>GitHub Pages hosts this site and sees your IP address, like any web host.</li>
+  </ul>
+
+  <h2>How long we keep it</h2>
+  <p>Until you unsubscribe or the waitlist closes. After that we delete your address.</p>
+
+  <h2>Your rights</h2>
+  <p>You can view, correct, or delete your data. <a href="#" class="mailto" data-inbox="ZGF2aWQubW8uYnJpbmlAZ21haWwuY29t">Mail us</a> and we will sort it out.</p>
+
+  <h2>The app</h2>
+  <p>The Youmechef app has its own privacy statement, shown when you create an account.</p>
+
+  <h2>Changes</h2>
+  <p>We may update this statement. The date above shows when that last happened.</p>
+</main>
+
+<footer class="footer">
+  <p>Youmechef</p>
+  <p class="micro"><a href="./">Privacy</a> &middot; <a href="../terms/">Terms</a></p>
+  <p class="micro">&copy; <span id="year">2026</span> Youmechef. All rights reserved.</p>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  // Address is base64'd to keep plain-text scrapers off it.
+  document.querySelectorAll('.mailto').forEach(function (a) {
+    a.href = 'mailto:' + atob(a.dataset.inbox);
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Youmechef | Voorwaarden</title>
+<meta name="description" content="De voorwaarden van Youmechef.">
+<link rel="icon" href="../assets/favicon.png">
+<link rel="canonical" href="https://dutchhummuus.github.io/Youmechef-website/voorwaarden/">
+<link rel="alternate" hreflang="nl" href="https://dutchhummuus.github.io/Youmechef-website/voorwaarden/">
+<link rel="alternate" hreflang="en" href="https://dutchhummuus.github.io/Youmechef-website/en/terms/">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<header class="nav">
+  <a class="brand" href="../">
+    <img src="../assets/logo.png" alt="" width="36" height="36">
+    <span>Youmechef</span>
+  </a>
+  <nav>
+    <a href="../">Terug naar home</a>
+    <a class="lang" href="../en/terms/" hreflang="en" lang="en">EN</a>
+  </nav>
+</header>
+
+<main class="legal">
+  <h1>Voorwaarden</h1>
+  <p class="updated">Laatst bijgewerkt: 20 augustus 2026</p>
+
+  <h2>Over Youmechef</h2>
+  <p>Youmechef is een maaltijd-service in Utrecht, op dit moment in beta. Je kiest recepten en wij wegen alle ingredi&euml;nten precies af.</p>
+
+  <h2>Bestellen</h2>
+  <p>Je betaalt per bestelling. Er is geen abonnement en geen minimum. Een bestelling is definitief zodra je hebt betaald.</p>
+
+  <h2>Prijzen</h2>
+  <p>Porties zijn er vanaf &euro;4,50. Het totaalbedrag zie je altijd voordat je betaalt.</p>
+
+  <h2>Ophalen</h2>
+  <p>Je haalt je bestelling op bij De Pers in Utrecht, op het moment dat je kiest. Lukt dat niet, mail ons dan zo snel mogelijk.</p>
+
+  <h2>Verse producten</h2>
+  <p>We werken met verse, bederfelijke producten die we speciaal voor jou afwegen. Daarom kun je een bereide bestelling niet herroepen. Klopt er iets niet met je bestelling? <a href="#" class="mailto" data-inbox="ZGF2aWQubW8uYnJpbmlAZ21haWwuY29t">Mail ons</a> en we lossen het op.</p>
+
+  <h2>Allergenen</h2>
+  <p>Recepten kunnen allergenen bevatten. Controleer altijd de etiketten van de geleverde producten.</p>
+
+  <h2>Aansprakelijkheid</h2>
+  <p>Onze aansprakelijkheid is beperkt tot het bedrag van je bestelling, behalve waar de wet anders bepaalt.</p>
+
+  <h2>Recht</h2>
+  <p>Op deze voorwaarden is Nederlands recht van toepassing.</p>
+</main>
+
+<footer class="footer">
+  <p>Youmechef</p>
+  <p class="micro"><a href="../privacy/">Privacy</a> &middot; <a href="./">Voorwaarden</a></p>
+  <p class="micro">&copy; <span id="year">2026</span> Youmechef. Alle rechten voorbehouden.</p>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  // Address is base64'd to keep plain-text scrapers off it.
+  document.querySelectorAll('.mailto').forEach(function (a) {
+    a.href = 'mailto:' + atob(a.dataset.inbox);
+  });
+</script>
+
+</body>
+</html>
