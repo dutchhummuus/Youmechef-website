@@ -48,9 +48,9 @@
         <img class="picker-mark" src="../assets/logo.png" alt="" width="44" height="44">
         <p class="picker-title">Tonight, in two taps</p>
         <ul class="picker-list">
-          <li><span class="dot"></span> Baked feta pasta <em>25 min</em></li>
-          <li><span class="dot"></span> Shakshuka <em>30 min</em></li>
-          <li><span class="dot"></span> Birria tacos <em>2 hrs</em></li>
+          <li><span class="dot"></span> Linguine alfredo <em>25 min</em></li>
+          <li><span class="dot"></span> Sweet potato tacos <em>30 min</em></li>
+          <li><span class="dot"></span> Eggplant traybake <em>45 min</em></li>
         </ul>
         <p class="picker-foot">Or add your own recipe</p>
       </div>
@@ -81,33 +81,50 @@
     </div>
     <ul class="recipe-grid">
       <li class="recipe">
-        <div class="recipe-top"><span class="tag">Popular</span><span class="time">25 min</span></div>
-        <h3>Baked feta pasta</h3>
-        <p class="recipe-meta">Easy &middot; 2 people &middot; from &euro;9,00</p>
+        <img class="recipe-photo" src="../assets/photos/tacos.jpg" alt="Sweet potato tacos with black beans" loading="lazy">
+        <div class="recipe-body">
+          <div class="recipe-top"><span class="tag">Popular</span><span class="time">30 min</span></div>
+          <h3>Sweet potato tacos</h3>
+          <p class="recipe-meta">Easy &middot; serves 2-4</p>
+        </div>
       </li>
       <li class="recipe">
-        <div class="recipe-top"><span class="tag">Popular</span><span class="time">2 hrs</span></div>
-        <h3>Birria tacos</h3>
-        <p class="recipe-meta">Medium &middot; 4 people &middot; from &euro;22,00</p>
+        <img class="recipe-photo" src="../assets/photos/linguine.jpg" alt="Linguine alfredo with mushroom bacon" loading="lazy">
+        <div class="recipe-body">
+          <div class="recipe-top"><span class="tag">Comfort</span><span class="time">25 min</span></div>
+          <h3>Linguine alfredo</h3>
+          <p class="recipe-meta">Medium &middot; serves 2-4</p>
+        </div>
       </li>
       <li class="recipe">
-        <div class="recipe-top"><span class="tag">Quick</span><span class="time">25 min</span></div>
-        <h3>Creamy carbonara</h3>
-        <p class="recipe-meta">Medium &middot; 2 people &middot; from &euro;11,00</p>
+        <img class="recipe-photo" src="../assets/photos/traybake.jpg" alt="Traybake with eggplant, chickpeas, and harissa" loading="lazy">
+        <div class="recipe-body">
+          <div class="recipe-top"><span class="tag">Veggie</span><span class="time">45 min</span></div>
+          <h3>Eggplant harissa traybake</h3>
+          <p class="recipe-meta">Easy &middot; serves 2-4</p>
+        </div>
       </li>
       <li class="recipe">
-        <div class="recipe-top"><span class="tag">Quick</span><span class="time">30 min</span></div>
-        <h3>Shakshuka</h3>
-        <p class="recipe-meta">Easy &middot; 2 people &middot; from &euro;10,00</p>
+        <img class="recipe-photo" src="../assets/photos/salad.jpg" alt="Strawberry spinach salad with feta" loading="lazy">
+        <div class="recipe-body">
+          <div class="recipe-top"><span class="tag">Quick</span><span class="time">15 min</span></div>
+          <h3>Strawberry spinach salad</h3>
+          <p class="recipe-meta">Easy &middot; serves 2-4</p>
+        </div>
       </li>
       <li class="recipe">
-        <div class="recipe-top"><span class="tag">Veggie</span><span class="time">35 min</span></div>
-        <h3>Caesar salad</h3>
-        <p class="recipe-meta">Easy &middot; 2 people &middot; from &euro;11,00</p>
+        <img class="recipe-photo" src="../assets/photos/soup.jpg" alt="Creamy lentil barley soup with mushrooms" loading="lazy">
+        <div class="recipe-body">
+          <div class="recipe-top"><span class="tag">New</span><span class="time">40 min</span></div>
+          <h3>Lentil barley soup</h3>
+          <p class="recipe-meta">Easy &middot; serves 2-4</p>
+        </div>
       </li>
       <li class="recipe recipe-own">
-        <h3>Got your own?</h3>
-        <p class="recipe-meta">Snap a photo, upload a file, or type it out. We read it and match the ingredients.</p>
+        <div class="recipe-body">
+          <h3>Got your own?</h3>
+          <p class="recipe-meta">Snap a photo, upload a file, or type it out. We read it and match the ingredients.</p>
+        </div>
       </li>
     </ul>
     <p class="section-foot micro">Menu updated every week.</p>
@@ -139,24 +156,59 @@
       <h2>Order what you want, when you want</h2>
       <p>One recipe for two. Three recipes for four. Or a whole week for yourself.</p>
     </div>
-    <div class="stat-row">
-      <div class="stat"><span class="stat-num">&euro;4,50</span><span class="stat-label">From, per portion</span></div>
-      <div class="stat"><span class="stat-num">1-12</span><span class="stat-label">People per recipe</span></div>
-      <div class="stat"><span class="stat-num">&euro;0</span><span class="stat-label">Minimum order</span></div>
-      <div class="stat"><span class="stat-num">None</span><span class="stat-label">Subscriptions</span></div>
+    <div class="pricing-grid">
+      <figure class="weighed">
+        <img src="../assets/photos/weighed.jpg" alt="All ingredients for one recipe, weighed out exactly" loading="lazy">
+        <figcaption class="micro">Every ingredient weighed to the gram. Nothing left over.</figcaption>
+      </figure>
+      <div class="stat-row">
+        <div class="stat"><span class="stat-num">&euro;4,50</span><span class="stat-label">From, per portion</span></div>
+        <div class="stat"><span class="stat-num">1-12</span><span class="stat-label">People per recipe</span></div>
+        <div class="stat"><span class="stat-num">&euro;0</span><span class="stat-label">Minimum order</span></div>
+        <div class="stat"><span class="stat-num">None</span><span class="stat-label">Subscriptions</span></div>
+      </div>
     </div>
   </section>
 
   <section class="partner">
-    <div class="partner-inner">
-      <p class="eyebrow eyebrow-light">Partner</p>
-      <h2>Together with De Pers, Utrecht</h2>
-      <p class="partner-lead">We work with the local supermarket Utrecht already knows. Fresh produce, fair prices, and now your ingredients weighed to order.</p>
-      <ul class="tick-list">
-        <li>Local quality, the same produce Utrecht trusts</li>
-        <li>Weighed to the gram, not half a kilo of carrots for two</li>
-        <li>Pickup at De Pers, whenever suits you</li>
-      </ul>
+    <div class="partner-grid">
+      <div class="partner-copy">
+        <p class="eyebrow eyebrow-light">Partner</p>
+        <h2>Together with De Pers, Utrecht</h2>
+        <p class="partner-lead">We work with the local supermarket Utrecht already knows. Fresh produce, fair prices, and now your ingredients weighed to order.</p>
+        <ul class="tick-list">
+          <li>Local quality, the same produce Utrecht trusts</li>
+          <li>Weighed to the gram, not half a kilo of carrots for two</li>
+          <li>Pickup at De Pers, whenever suits you</li>
+        </ul>
+      </div>
+      <div class="partner-photo">
+        <img src="../assets/photos/depers.jpg" alt="The De Pers greengrocer and delicatessen storefront in Utrecht" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section class="fresh">
+    <div class="section-head">
+      <h2>Fresh from De Pers</h2>
+      <p>Only produce that actually tastes good.</p>
+    </div>
+    <div class="fresh-grid">
+      <div class="fresh-item">
+        <img src="../assets/photos/tomato.jpg" alt="Fresh tomato" loading="lazy">
+        <h3>Tomato</h3>
+        <p>Does not taste like water.</p>
+      </div>
+      <div class="fresh-item">
+        <img src="../assets/photos/avocado.jpg" alt="Ripe avocado" loading="lazy">
+        <h3>Avocado</h3>
+        <p>Perfectly ripe. Really.</p>
+      </div>
+      <div class="fresh-item">
+        <img src="../assets/photos/parsley.jpg" alt="Fresh parsley" loading="lazy">
+        <h3>Parsley</h3>
+        <p>Not limp and brown.</p>
+      </div>
     </div>
   </section>
 
