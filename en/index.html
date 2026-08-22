@@ -127,6 +127,27 @@
     </div>
   </section>
 
+  <section class="insta">
+    <div class="insta-grid">
+      <div class="insta-video">
+        <video autoplay muted loop playsinline preload="metadata" poster="../assets/demo-poster.jpg" width="540" height="1048" aria-label="Demo: sharing an Instagram recipe to Youmechef, which recognises and prices every ingredient">
+          <source src="../assets/demo-instagram.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="insta-copy">
+        <span class="eyebrow">Your own recipe</span>
+        <h2>From Instagram to your basket.</h2>
+        <p class="insta-lead">See a recipe you want to make? Share it to Youmechef. We read it and match every ingredient.</p>
+        <ol class="insta-steps">
+          <li><span>1</span>Share the post to Youmechef</li>
+          <li><span>2</span>We read the recipe</li>
+          <li><span>3</span>Every ingredient matched and priced</li>
+        </ol>
+        <p class="micro">In the demo: creamy butter beans, 14 of 14 ingredients found, &euro;12,31 for 4 portions.</p>
+      </div>
+    </div>
+  </section>
+
   <section id="how" class="steps on-ink">
     <h2>Three steps to dinner</h2>
     <ol class="step-grid">
@@ -259,6 +280,16 @@
   signup.addEventListener('submit', function () {
     signup.action = 'https://formsubmit.co/' + atob(signup.dataset.inbox);
   });
+
+  // Respect reduced-motion: no looping autoplay, hand over manual controls instead.
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.querySelectorAll('.insta-video video').forEach(function (v) {
+      v.removeAttribute('autoplay');
+      v.removeAttribute('loop');
+      v.pause();
+      v.controls = true;
+    });
+  }
 </script>
 
 </body>

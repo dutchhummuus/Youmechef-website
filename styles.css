@@ -393,6 +393,60 @@ img { max-width: 100%; height: auto; }
 .recipe-own h3 { font-size: 22px; margin-bottom: 8px; }
 .recipe-own p { color: var(--text-muted); font-size: 15px; }
 
+/* Instagram demo */
+
+.insta {
+  max-width: var(--page);
+  margin: 0 auto;
+  padding: 96px 24px;
+}
+.insta-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 64px;
+  align-items: center;
+}
+.insta-video {
+  display: flex;
+  justify-content: center;
+}
+.insta-video video {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  /* matches the phone's own corner radius so the black corners in the clip disappear */
+  border-radius: 30px;
+  background: var(--ink);
+  box-shadow: 0 30px 60px rgba(14, 20, 17, 0.3);
+}
+.insta-copy h2 { font-size: clamp(30px, 4.2vw, 44px); }
+.insta-lead {
+  color: var(--text-muted);
+  font-size: 18px;
+  margin: 18px 0 26px;
+  max-width: 46ch;
+}
+.insta-steps {
+  list-style: none;
+  margin: 0 0 22px;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+.insta-steps li {
+  display: flex;
+  gap: 14px;
+  align-items: baseline;
+  font-size: 16px;
+}
+.insta-steps span {
+  font-family: var(--serif);
+  color: var(--gold);
+  font-size: 20px;
+  min-width: 18px;
+}
+
 /* Steps */
 
 .steps {
@@ -736,9 +790,11 @@ img { max-width: 100%; height: auto; }
   .recipe-grid,
   .pricing-grid,
   .partner-grid,
+  .insta-grid,
   .fresh-grid { grid-template-columns: 1fr; }
-  .partner-grid, .pricing-grid { gap: 36px; }
-  .problem, .recipes, .steps, .pricing, .partner, .why { padding: 64px 24px; }
+  .partner-grid, .pricing-grid, .insta-grid { gap: 36px; }
+  .insta-video { order: 2; }
+  .problem, .recipes, .steps, .pricing, .partner, .why, .insta { padding: 64px 24px; }
   .fresh { margin-top: 56px; padding-top: 44px; }
   .waitlist { padding: 48px 24px; }
   .stat-label { text-align: right; }
