@@ -4,11 +4,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Youmechef | Kies een recept, wij wegen alles af</title>
-<meta name="description" content="Kies uit onze recepten en wij wegen elk ingredi&euml;nt precies af. Ophalen bij De Pers in Utrecht. Geen minimum, geen abonnement.">
+<meta name="description" content="Kies uit geteste recepten en wij wegen elk ingredi&euml;nt precies af. Ophalen bij De Pers in Utrecht. Geen minimum, geen abonnement.">
 <meta property="og:title" content="Youmechef">
 <meta property="og:description" content="Kies een recept. Wij wegen de ingredi&euml;nten af. Geen verspilling, geen minimum, geen abonnement.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="nl_NL">
+<meta property="og:url" content="https://dutchhummuus.github.io/Youmechef-website/">
+<meta property="og:image" content="https://dutchhummuus.github.io/Youmechef-website/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="assets/favicon.png">
 <link rel="canonical" href="https://dutchhummuus.github.io/Youmechef-website/">
 <link rel="alternate" hreflang="nl" href="https://dutchhummuus.github.io/Youmechef-website/">
@@ -17,127 +22,118 @@
 </head>
 <body>
 
-<header class="nav">
-  <a class="brand" href="#top">
-    <img src="assets/logo.png" alt="" width="36" height="36">
-    <span>Youmechef</span>
-  </a>
-  <nav>
-    <a href="#recipes">Recepten</a>
-    <a href="#how">Hoe werkt het</a>
-    <a href="#pricing">Prijzen</a>
-    <a class="lang" href="en/" hreflang="en" lang="en">EN</a>
-    <a class="btn btn-small" href="#waitlist">Start nu</a>
-  </nav>
-</header>
+<div class="top on-ink">
+  <header class="nav">
+    <a class="brand" href="#top">
+      <img src="assets/logo.png" alt="" width="36" height="36">
+      <span>Youmechef</span>
+    </a>
+    <nav>
+      <a href="#menu">Menu</a>
+      <a href="#how">Hoe werkt het</a>
+      <a href="#pricing">Prijzen</a>
+      <a class="lang" href="en/" hreflang="en" lang="en">EN</a>
+      <a class="btn btn-small" href="#waitlist">Vraag toegang</a>
+    </nav>
+  </header>
 
-<main id="top">
-
-  <section class="hero">
+  <section class="hero" id="top">
     <div class="hero-copy">
-      <p class="eyebrow">Nu live in Utrecht</p>
+      <span class="eyebrow">Beta in Utrecht</span>
       <h1>Kies een recept.<br>Klaar met bedenken.</h1>
-      <p class="lead">Onze chefs deden het denkwerk al. Kies uit onze geteste recepten en wij wegen elk ingredi&euml;nt precies af.</p>
+      <p class="lead"><strong>You. Me. Chef.</strong> Het denkwerk is al gedaan. Kies uit geteste recepten en wij wegen elk ingredi&euml;nt precies af.</p>
       <div class="cta-row">
-        <a class="btn" href="#recipes">Bekijk recepten</a>
-        <a class="btn btn-ghost" href="#how">Hoe werkt het</a>
+        <a class="btn" href="#waitlist">Vraag toegang</a>
+        <a class="btn btn-ghost" href="#menu">Bekijk het menu</a>
       </div>
       <p class="micro">Geen minimum. Geen abonnement. Vanaf &euro;4,50 per portie.</p>
     </div>
-    <div class="hero-art">
-      <div class="picker">
-        <img class="picker-mark" src="assets/logo.png" alt="" width="44" height="44">
-        <p class="picker-title">Vanavond, in twee kliks</p>
-        <ul class="picker-list">
-          <li><span class="dot"></span> Linguine alfredo <em>25 min</em></li>
-          <li><span class="dot"></span> Zoete-aardappel taco's <em>30 min</em></li>
-          <li><span class="dot"></span> Traybake met aubergine <em>45 min</em></li>
-        </ul>
-        <p class="picker-foot">Of voeg je eigen recept toe</p>
-      </div>
+    <div class="hero-photo">
+      <img src="assets/photos/tacos.jpg" alt="Zoete-aardappel taco's op een houten plank" width="900" height="604" fetchpriority="high">
+      <div class="hero-chip"><span class="dot"></span> Zoete-aardappel taco's <em>30 min</em></div>
     </div>
   </section>
+</div>
+
+<main>
 
   <section class="problem">
     <div class="problem-inner">
-      <h2>Bedenken wat je gaat koken is het vervelendste</h2>
+      <div class="section-head">
+        <h2>Wat eten we vanavond?</h2>
+        <p>Het eeuwige gedoe.</p>
+      </div>
       <div class="problem-grid">
-        <blockquote>
-          <p>"Ik bewaar constant recepten en maak er nooit een."</p>
-        </blockquote>
-        <blockquote>
-          <p>"Ik heb &eacute;&eacute;n wortel en drie eetlepels komijn nodig. De winkel verkoopt zakken en potten."</p>
-        </blockquote>
-        <blockquote>
-          <p>"Een hele week plannen voelt als commitment. &Eacute;&eacute;n maaltijd voelt als verspilling."</p>
-        </blockquote>
+        <blockquote><p>"Ik bewaar constant recepten en maak er nooit een."</p></blockquote>
+        <blockquote><p>"Ik heb &eacute;&eacute;n wortel en drie eetlepels komijn nodig. De winkel verkoopt zakken en potten."</p></blockquote>
+        <blockquote><p>"Een hele week plannen voelt als commitment. &Eacute;&eacute;n maaltijd voelt als verspilling."</p></blockquote>
       </div>
     </div>
   </section>
 
-  <section id="recipes" class="recipes">
-    <div class="section-head">
-      <h2>Begin met onze recepten</h2>
-      <p>Getest, doorgerekend en klaar om te bestellen. Niet zoeken, niet gokken.</p>
-    </div>
-    <ul class="recipe-grid">
-      <li class="recipe">
-        <img class="recipe-photo" src="assets/photos/tacos.jpg" alt="Zoete-aardappel taco's met zwarte bonen" loading="lazy">
-        <div class="recipe-body">
-          <div class="recipe-top"><span class="tag">Populair</span><span class="time">30 min</span></div>
-          <h3>Zoete-aardappel taco's</h3>
-          <p class="recipe-meta">Makkelijk &middot; 2-4 personen</p>
-        </div>
-      </li>
-      <li class="recipe">
-        <img class="recipe-photo" src="assets/photos/linguine.jpg" alt="Linguine alfredo met paddenstoelbacon" loading="lazy">
-        <div class="recipe-body">
-          <div class="recipe-top"><span class="tag">Comfort</span><span class="time">25 min</span></div>
-          <h3>Linguine alfredo</h3>
-          <p class="recipe-meta">Gemiddeld &middot; 2-4 personen</p>
-        </div>
-      </li>
-      <li class="recipe">
-        <img class="recipe-photo" src="assets/photos/traybake.jpg" alt="Traybake met aubergine, kikkererwten en harissa" loading="lazy">
-        <div class="recipe-body">
-          <div class="recipe-top"><span class="tag">Veggie</span><span class="time">45 min</span></div>
-          <h3>Traybake met aubergine en harissa</h3>
-          <p class="recipe-meta">Makkelijk &middot; 2-4 personen</p>
-        </div>
-      </li>
-      <li class="recipe">
-        <img class="recipe-photo" src="assets/photos/salad.jpg" alt="Aardbei-spinaziesalade met feta" loading="lazy">
-        <div class="recipe-body">
-          <div class="recipe-top"><span class="tag">Snel</span><span class="time">15 min</span></div>
-          <h3>Aardbei-spinaziesalade</h3>
-          <p class="recipe-meta">Makkelijk &middot; 2-4 personen</p>
-        </div>
-      </li>
-      <li class="recipe">
-        <img class="recipe-photo" src="assets/photos/soup.jpg" alt="Romige linzen-gerstsoep met paddenstoelen" loading="lazy">
-        <div class="recipe-body">
-          <div class="recipe-top"><span class="tag">Nieuw</span><span class="time">40 min</span></div>
-          <h3>Linzen-gerstsoep</h3>
-          <p class="recipe-meta">Makkelijk &middot; 2-4 personen</p>
-        </div>
-      </li>
-      <li class="recipe recipe-own">
-        <div class="recipe-body">
+  <section id="menu" class="recipes">
+    <div class="recipes-inner">
+      <div class="section-head">
+        <h2>Het menu</h2>
+        <p>Getest, doorgerekend en klaar om te bestellen.</p>
+      </div>
+      <ul class="recipe-grid">
+        <li class="recipe">
+          <a href="#waitlist">
+            <div class="recipe-photo-wrap"><img class="recipe-photo" src="assets/photos/tacos.jpg" alt="Zoete-aardappel taco's met zwarte bonen" width="900" height="604" loading="lazy"></div>
+            <div class="recipe-top"><h3>Zoete-aardappel taco's</h3><span class="time">30 min</span></div>
+            <p class="recipe-meta">Makkelijk &middot; Vegetarisch</p>
+            <span class="recipe-cta">Bestellen in de app</span>
+          </a>
+        </li>
+        <li class="recipe">
+          <a href="#waitlist">
+            <div class="recipe-photo-wrap"><img class="recipe-photo" src="assets/photos/linguine.jpg" alt="Linguine alfredo met paddenstoelbacon" width="900" height="601" loading="lazy"></div>
+            <div class="recipe-top"><h3>Linguine alfredo</h3><span class="time">25 min</span></div>
+            <p class="recipe-meta">Gemiddeld &middot; Vegetarisch</p>
+            <span class="recipe-cta">Bestellen in de app</span>
+          </a>
+        </li>
+        <li class="recipe">
+          <a href="#waitlist">
+            <div class="recipe-photo-wrap"><img class="recipe-photo" src="assets/photos/traybake.jpg" alt="Traybake met aubergine, kikkererwten en harissa" width="900" height="601" loading="lazy"></div>
+            <div class="recipe-top"><h3>Traybake met aubergine</h3><span class="time">45 min</span></div>
+            <p class="recipe-meta">Makkelijk &middot; Vegetarisch</p>
+            <span class="recipe-cta">Bestellen in de app</span>
+          </a>
+        </li>
+        <li class="recipe">
+          <a href="#waitlist">
+            <div class="recipe-photo-wrap"><img class="recipe-photo" src="assets/photos/salad.jpg" alt="Aardbei-spinaziesalade met feta" width="900" height="675" loading="lazy"></div>
+            <div class="recipe-top"><h3>Aardbei-spinaziesalade</h3><span class="time">15 min</span></div>
+            <p class="recipe-meta">Makkelijk &middot; Vegetarisch</p>
+            <span class="recipe-cta">Bestellen in de app</span>
+          </a>
+        </li>
+        <li class="recipe">
+          <a href="#waitlist">
+            <div class="recipe-photo-wrap"><img class="recipe-photo" src="assets/photos/soup.jpg" alt="Romige linzen-gerstsoep met paddenstoelen" width="900" height="604" loading="lazy"></div>
+            <div class="recipe-top"><h3>Linzen-gerstsoep</h3><span class="time">40 min</span></div>
+            <p class="recipe-meta">Makkelijk &middot; Vegetarisch</p>
+            <span class="recipe-cta">Bestellen in de app</span>
+          </a>
+        </li>
+        <li class="recipe-own">
           <h3>Eigen recept?</h3>
-          <p class="recipe-meta">Maak een foto, upload een bestand of typ het uit. Wij lezen het en zoeken de ingredi&euml;nten erbij.</p>
-        </div>
-      </li>
-    </ul>
-    <p class="section-foot micro">Elke week nieuwe recepten.</p>
+          <p>Deel het vanuit Instagram, maak een foto of typ het uit. Wij lezen het en zoeken de ingredi&euml;nten erbij.</p>
+        </li>
+      </ul>
+      <p class="section-foot micro">Het menu wisselt regelmatig.</p>
+    </div>
   </section>
 
-  <section id="how" class="steps">
+  <section id="how" class="steps on-ink">
     <h2>Zo simpel werkt het</h2>
     <ol class="step-grid">
       <li>
         <span class="step-num">1</span>
         <h3>Kies je recepten</h3>
-        <p>Kies uit onze recepten. &Eacute;&eacute;n maaltijd voor vanavond, of een plan voor de hele week.</p>
+        <p>Kies uit het menu. &Eacute;&eacute;n maaltijd voor vanavond, of een plan voor de hele week.</p>
       </li>
       <li>
         <span class="step-num">2</span>
@@ -154,70 +150,66 @@
 
   <section id="pricing" class="pricing">
     <div class="section-head">
-      <h2>Bestel wat jij wilt, wanneer jij wilt</h2>
-      <p>&Eacute;&eacute;n recept voor twee. Drie recepten voor vier. Of een hele week voor jezelf.</p>
+      <h2>Bestel wat jij wilt.</h2>
+      <p>&Eacute;&eacute;n recept voor twee. Drie voor vier. Of een hele week voor jezelf. Zonder abonnement.</p>
     </div>
     <div class="pricing-grid">
       <figure class="weighed">
-        <img src="assets/photos/weighed.jpg" alt="Alle ingredi&euml;nten voor een recept, precies afgewogen" loading="lazy">
+        <img src="assets/photos/weighed.jpg" alt="Alle ingredi&euml;nten voor een recept, precies afgewogen" width="1000" height="668" loading="lazy">
         <figcaption class="micro">Elk ingredi&euml;nt precies afgewogen. Niets over.</figcaption>
       </figure>
-      <div class="stat-row">
-        <div class="stat"><span class="stat-num">&euro;4,50</span><span class="stat-label">Vanaf, per portie</span></div>
-        <div class="stat"><span class="stat-num">1-12</span><span class="stat-label">Personen per recept</span></div>
-        <div class="stat"><span class="stat-num">&euro;0</span><span class="stat-label">Minimum bestelling</span></div>
-        <div class="stat"><span class="stat-num">Geen</span><span class="stat-label">Abonnementen</span></div>
-      </div>
+      <ul class="stat-list">
+        <li><span class="stat-num">&euro;4,50</span><span class="stat-label">vanaf, per portie</span></li>
+        <li><span class="stat-num">1-12</span><span class="stat-label">personen per recept</span></li>
+        <li><span class="stat-num">&euro;0</span><span class="stat-label">minimum bestelling</span></li>
+      </ul>
     </div>
   </section>
 
-  <section class="partner">
+  <section class="partner on-ink">
     <div class="partner-grid">
       <div class="partner-copy">
-        <p class="eyebrow eyebrow-light">Partner</p>
+        <span class="eyebrow">Partner</span>
         <h2>Samen met De Pers, Utrecht</h2>
         <p class="partner-lead">We werken samen met de lokale supermarkt die Utrecht al kent. Verse producten, eerlijke prijzen, en nu ook jouw ingredi&euml;nten precies afgewogen.</p>
         <ul class="tick-list">
-          <li>Lokale kwaliteit, dezelfde verse producten waar Utrecht op vertrouwt</li>
+          <li>Dezelfde verse producten waar Utrecht op vertrouwt</li>
           <li>Precies afgewogen, geen halve kilo wortels voor twee</li>
           <li>Ophalen bij De Pers, wanneer het jou uitkomt</li>
         </ul>
       </div>
       <div class="partner-photo">
-        <img src="assets/photos/depers.jpg" alt="De winkel van De Pers, groente en delicatessen, in Utrecht" loading="lazy">
+        <img src="assets/photos/depers.jpg" alt="De winkel van De Pers, groente en delicatessen, in Utrecht" width="1000" height="730" loading="lazy">
       </div>
     </div>
-  </section>
-
-  <section class="fresh">
-    <div class="section-head">
-      <h2>Vers van De Pers</h2>
+    <div class="fresh">
+      <h3>Vers van De Pers</h3>
       <p>Alleen producten die echt lekker zijn.</p>
-    </div>
-    <div class="fresh-grid">
-      <div class="fresh-item">
-        <img src="assets/photos/tomato.jpg" alt="Verse tomaat" loading="lazy">
-        <h3>Tomaat</h3>
-        <p>Smaakt niet naar water.</p>
-      </div>
-      <div class="fresh-item">
-        <img src="assets/photos/avocado.jpg" alt="Rijpe avocado" loading="lazy">
-        <h3>Avocado</h3>
-        <p>Perfect rijp. Echt waar.</p>
-      </div>
-      <div class="fresh-item">
-        <img src="assets/photos/parsley.jpg" alt="Verse peterselie" loading="lazy">
-        <h3>Peterselie</h3>
-        <p>Niet slap en bruin.</p>
+      <div class="fresh-grid">
+        <div class="fresh-item">
+          <img src="assets/photos/tomato.jpg" alt="Verse tomaat" width="480" height="480" loading="lazy">
+          <h4>Tomaat</h4>
+          <p>Smaakt niet naar water.</p>
+        </div>
+        <div class="fresh-item">
+          <img src="assets/photos/avocado.jpg" alt="Rijpe avocado" width="480" height="480" loading="lazy">
+          <h4>Avocado</h4>
+          <p>Perfect rijp. Echt waar.</p>
+        </div>
+        <div class="fresh-item">
+          <img src="assets/photos/parsley.jpg" alt="Verse peterselie" width="480" height="480" loading="lazy">
+          <h4>Peterselie</h4>
+          <p>Niet slap en bruin.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="features">
+  <section class="why">
     <div class="section-head">
-      <h2>Waarom koks kiezen voor Youmechef</h2>
+      <h2>Waarom Youmechef</h2>
     </div>
-    <div class="feature-grid">
+    <div class="why-grid">
       <article>
         <h3>Stop met uitstellen</h3>
         <p>Bewaarde posts, open tabs, gele briefjes. Nu maak je het echt.</p>
@@ -227,41 +219,32 @@
         <p>Niet meer door de schappen dwalen. Meer tijd in de keuken.</p>
       </article>
       <article>
-        <h3>Geen verspilling</h3>
-        <p>Precies wat het recept nodig heeft. Niets dat wegrot in de la.</p>
-      </article>
-      <article>
-        <h3>Echte porties</h3>
-        <p>Geef aan hoeveel mensen mee-eten. De hoeveelheden volgen.</p>
-      </article>
-      <article>
-        <h3>Ook jouw recepten</h3>
-        <p>Foto, screenshot of gewoon tekst. Wij lezen het en zoeken de ingredi&euml;nten erbij.</p>
-      </article>
-      <article>
         <h3>Opnieuw bestellen in &eacute;&eacute;n klik</h3>
         <p>Was het lekker? Doe die week nog eens.</p>
       </article>
     </div>
   </section>
 
-  <section id="waitlist" class="waitlist">
-    <h2>Klaar om iets lekkers te koken?</h2>
-    <p>Youmechef is live in Utrecht en rolt uit naar meer steden. Laat je e-mail achter en we laten je erin.</p>
-    <form class="signup" id="signup" data-inbox="ZGF2aWQubW8uYnJpbmlAZ21haWwuY29t" method="POST">
-      <input type="hidden" name="_subject" value="New Youmechef waitlist signup">
-      <input type="hidden" name="_captcha" value="false">
-      <label class="sr-only" for="email">E-mailadres</label>
-      <input id="email" type="email" name="email" placeholder="jij@voorbeeld.nl" required autocomplete="email">
-      <button class="btn" type="submit">Zet me op de wachtlijst</button>
-    </form>
-    <p class="micro">Geen creditcard nodig. Je betaalt alleen wat je bestelt.</p>
-  </section>
+  <div class="waitlist-wrap">
+    <section id="waitlist" class="waitlist on-ink">
+      <h2>Klaar om te koken?</h2>
+      <p>Youmechef draait in beta in Utrecht. Laat je e-mail achter en we laten je erin.</p>
+      <form class="signup" id="signup" data-inbox="ZGF2aWQubW8uYnJpbmlAZ21haWwuY29t" method="POST">
+        <input type="hidden" name="_subject" value="New Youmechef access request">
+        <input type="hidden" name="_captcha" value="false">
+        <label class="sr-only" for="email">E-mailadres</label>
+        <input id="email" type="email" name="email" placeholder="jij@voorbeeld.nl" required autocomplete="email">
+        <button class="btn" type="submit">Vraag toegang</button>
+      </form>
+      <p class="micro">Geen creditcard nodig. Je betaalt alleen wat je bestelt.</p>
+    </section>
+  </div>
 
 </main>
 
 <footer class="footer">
   <p>Youmechef</p>
+  <p class="tagline">You. Me. Chef.</p>
   <p class="micro">Ophalen bij De Pers, Utrecht. Binnenkort meer steden.</p>
   <p class="micro"><a href="privacy/">Privacy</a> &middot; <a href="voorwaarden/">Voorwaarden</a></p>
   <p class="micro">&copy; <span id="year">2026</span> Youmechef. Alle rechten voorbehouden.</p>

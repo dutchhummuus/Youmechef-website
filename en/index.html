@@ -1,13 +1,19 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Youmechef | Pick a recipe, get it weighed to the gram</title>
-<meta name="description" content="Pick from our recipes and we weigh every ingredient to the gram. Pickup at De Pers in Utrecht. No minimum order, no subscription.">
+<meta name="description" content="Pick from tested recipes and we weigh every ingredient to the gram. Pickup at De Pers in Utrecht. No minimum order, no subscription.">
 <meta property="og:title" content="Youmechef">
 <meta property="og:description" content="Pick a recipe. We weigh the ingredients. No waste, no minimum, no subscription.">
 <meta property="og:type" content="website">
+<meta property="og:locale" content="en_GB">
+<meta property="og:url" content="https://dutchhummuus.github.io/Youmechef-website/en/">
+<meta property="og:image" content="https://dutchhummuus.github.io/Youmechef-website/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="../assets/favicon.png">
 <link rel="canonical" href="https://dutchhummuus.github.io/Youmechef-website/en/">
 <link rel="alternate" hreflang="nl" href="https://dutchhummuus.github.io/Youmechef-website/">
@@ -16,127 +22,118 @@
 </head>
 <body>
 
-<header class="nav">
-  <a class="brand" href="#top">
-    <img src="../assets/logo.png" alt="" width="36" height="36">
-    <span>Youmechef</span>
-  </a>
-  <nav>
-    <a href="#recipes">Recipes</a>
-    <a href="#how">How it works</a>
-    <a href="#pricing">Pricing</a>
-    <a class="lang" href="../" hreflang="nl" lang="nl">NL</a>
-    <a class="btn btn-small" href="#waitlist">Start now</a>
-  </nav>
-</header>
+<div class="top on-ink">
+  <header class="nav">
+    <a class="brand" href="#top">
+      <img src="../assets/logo.png" alt="" width="36" height="36">
+      <span>Youmechef</span>
+    </a>
+    <nav>
+      <a href="#menu">Menu</a>
+      <a href="#how">How it works</a>
+      <a href="#pricing">Pricing</a>
+      <a class="lang" href="../" hreflang="nl" lang="nl">NL</a>
+      <a class="btn btn-small" href="#waitlist">Request access</a>
+    </nav>
+  </header>
 
-<main id="top">
-
-  <section class="hero">
+  <section class="hero" id="top">
     <div class="hero-copy">
-      <p class="eyebrow">Now live in Utrecht</p>
+      <span class="eyebrow">Beta in Utrecht</span>
       <h1>Pick a recipe.<br>Skip the thinking.</h1>
-      <p class="lead">Our chefs already did the hard part. Choose from our tested recipes and we weigh every ingredient to the gram.</p>
+      <p class="lead"><strong>You. Me. Chef.</strong> The thinking is done. Pick from tested recipes and we weigh every ingredient to the gram.</p>
       <div class="cta-row">
-        <a class="btn" href="#recipes">Browse recipes</a>
-        <a class="btn btn-ghost" href="#how">How it works</a>
+        <a class="btn" href="#waitlist">Request access</a>
+        <a class="btn btn-ghost" href="#menu">See the menu</a>
       </div>
-      <p class="micro">No minimum order. No subscription. From &euro;4,50 per portion.</p>
+      <p class="micro">No minimum. No subscription. From &euro;4,50 per portion.</p>
     </div>
-    <div class="hero-art">
-      <div class="picker">
-        <img class="picker-mark" src="../assets/logo.png" alt="" width="44" height="44">
-        <p class="picker-title">Tonight, in two taps</p>
-        <ul class="picker-list">
-          <li><span class="dot"></span> Linguine alfredo <em>25 min</em></li>
-          <li><span class="dot"></span> Sweet potato tacos <em>30 min</em></li>
-          <li><span class="dot"></span> Eggplant traybake <em>45 min</em></li>
-        </ul>
-        <p class="picker-foot">Or add your own recipe</p>
-      </div>
+    <div class="hero-photo">
+      <img src="../assets/photos/tacos.jpg" alt="Sweet potato tacos on a wooden board" width="900" height="604" fetchpriority="high">
+      <div class="hero-chip"><span class="dot"></span> Sweet potato tacos <em>30 min</em></div>
     </div>
   </section>
+</div>
+
+<main>
 
   <section class="problem">
     <div class="problem-inner">
-      <h2>Deciding what to cook is the worst part</h2>
+      <div class="section-head">
+        <h2>What's for dinner?</h2>
+        <p>The eternal question.</p>
+      </div>
       <div class="problem-grid">
-        <blockquote>
-          <p>"I save recipes constantly and never make any of them."</p>
-        </blockquote>
-        <blockquote>
-          <p>"I need one carrot and three spoons of cumin. The shop sells bags and jars."</p>
-        </blockquote>
-        <blockquote>
-          <p>"Planning a whole week feels like a commitment. One meal feels like a waste."</p>
-        </blockquote>
+        <blockquote><p>"I save recipes constantly and never make any of them."</p></blockquote>
+        <blockquote><p>"I need one carrot and three spoons of cumin. The shop sells bags and jars."</p></blockquote>
+        <blockquote><p>"Planning a whole week feels like a commitment. One meal feels like a waste."</p></blockquote>
       </div>
     </div>
   </section>
 
-  <section id="recipes" class="recipes">
-    <div class="section-head">
-      <h2>Start with our recipes</h2>
-      <p>Tested, costed, and ready to order. No searching, no guessing.</p>
-    </div>
-    <ul class="recipe-grid">
-      <li class="recipe">
-        <img class="recipe-photo" src="../assets/photos/tacos.jpg" alt="Sweet potato tacos with black beans" loading="lazy">
-        <div class="recipe-body">
-          <div class="recipe-top"><span class="tag">Popular</span><span class="time">30 min</span></div>
-          <h3>Sweet potato tacos</h3>
-          <p class="recipe-meta">Easy &middot; serves 2-4</p>
-        </div>
-      </li>
-      <li class="recipe">
-        <img class="recipe-photo" src="../assets/photos/linguine.jpg" alt="Linguine alfredo with mushroom bacon" loading="lazy">
-        <div class="recipe-body">
-          <div class="recipe-top"><span class="tag">Comfort</span><span class="time">25 min</span></div>
-          <h3>Linguine alfredo</h3>
-          <p class="recipe-meta">Medium &middot; serves 2-4</p>
-        </div>
-      </li>
-      <li class="recipe">
-        <img class="recipe-photo" src="../assets/photos/traybake.jpg" alt="Traybake with eggplant, chickpeas, and harissa" loading="lazy">
-        <div class="recipe-body">
-          <div class="recipe-top"><span class="tag">Veggie</span><span class="time">45 min</span></div>
-          <h3>Eggplant harissa traybake</h3>
-          <p class="recipe-meta">Easy &middot; serves 2-4</p>
-        </div>
-      </li>
-      <li class="recipe">
-        <img class="recipe-photo" src="../assets/photos/salad.jpg" alt="Strawberry spinach salad with feta" loading="lazy">
-        <div class="recipe-body">
-          <div class="recipe-top"><span class="tag">Quick</span><span class="time">15 min</span></div>
-          <h3>Strawberry spinach salad</h3>
-          <p class="recipe-meta">Easy &middot; serves 2-4</p>
-        </div>
-      </li>
-      <li class="recipe">
-        <img class="recipe-photo" src="../assets/photos/soup.jpg" alt="Creamy lentil barley soup with mushrooms" loading="lazy">
-        <div class="recipe-body">
-          <div class="recipe-top"><span class="tag">New</span><span class="time">40 min</span></div>
-          <h3>Lentil barley soup</h3>
-          <p class="recipe-meta">Easy &middot; serves 2-4</p>
-        </div>
-      </li>
-      <li class="recipe recipe-own">
-        <div class="recipe-body">
+  <section id="menu" class="recipes">
+    <div class="recipes-inner">
+      <div class="section-head">
+        <h2>The menu</h2>
+        <p>Tested, costed, and ready to order.</p>
+      </div>
+      <ul class="recipe-grid">
+        <li class="recipe">
+          <a href="#waitlist">
+            <div class="recipe-photo-wrap"><img class="recipe-photo" src="../assets/photos/tacos.jpg" alt="Sweet potato tacos with black beans" width="900" height="604" loading="lazy"></div>
+            <div class="recipe-top"><h3>Sweet potato tacos</h3><span class="time">30 min</span></div>
+            <p class="recipe-meta">Easy &middot; Vegetarian</p>
+            <span class="recipe-cta">Order in the app</span>
+          </a>
+        </li>
+        <li class="recipe">
+          <a href="#waitlist">
+            <div class="recipe-photo-wrap"><img class="recipe-photo" src="../assets/photos/linguine.jpg" alt="Linguine alfredo with mushroom bacon" width="900" height="601" loading="lazy"></div>
+            <div class="recipe-top"><h3>Linguine alfredo</h3><span class="time">25 min</span></div>
+            <p class="recipe-meta">Medium &middot; Vegetarian</p>
+            <span class="recipe-cta">Order in the app</span>
+          </a>
+        </li>
+        <li class="recipe">
+          <a href="#waitlist">
+            <div class="recipe-photo-wrap"><img class="recipe-photo" src="../assets/photos/traybake.jpg" alt="Traybake with eggplant, chickpeas, and harissa" width="900" height="601" loading="lazy"></div>
+            <div class="recipe-top"><h3>Eggplant harissa traybake</h3><span class="time">45 min</span></div>
+            <p class="recipe-meta">Easy &middot; Vegetarian</p>
+            <span class="recipe-cta">Order in the app</span>
+          </a>
+        </li>
+        <li class="recipe">
+          <a href="#waitlist">
+            <div class="recipe-photo-wrap"><img class="recipe-photo" src="../assets/photos/salad.jpg" alt="Strawberry spinach salad with feta" width="900" height="675" loading="lazy"></div>
+            <div class="recipe-top"><h3>Strawberry spinach salad</h3><span class="time">15 min</span></div>
+            <p class="recipe-meta">Easy &middot; Vegetarian</p>
+            <span class="recipe-cta">Order in the app</span>
+          </a>
+        </li>
+        <li class="recipe">
+          <a href="#waitlist">
+            <div class="recipe-photo-wrap"><img class="recipe-photo" src="../assets/photos/soup.jpg" alt="Creamy lentil barley soup with mushrooms" width="900" height="604" loading="lazy"></div>
+            <div class="recipe-top"><h3>Lentil barley soup</h3><span class="time">40 min</span></div>
+            <p class="recipe-meta">Easy &middot; Vegetarian</p>
+            <span class="recipe-cta">Order in the app</span>
+          </a>
+        </li>
+        <li class="recipe-own">
           <h3>Got your own?</h3>
-          <p class="recipe-meta">Snap a photo, upload a file, or type it out. We read it and match the ingredients.</p>
-        </div>
-      </li>
-    </ul>
-    <p class="section-foot micro">Menu updated every week.</p>
+          <p>Share it from Instagram, snap a photo, or type it out. We read it and match the ingredients.</p>
+        </li>
+      </ul>
+      <p class="section-foot micro">The menu changes regularly.</p>
+    </div>
   </section>
 
-  <section id="how" class="steps">
+  <section id="how" class="steps on-ink">
     <h2>Three steps to dinner</h2>
     <ol class="step-grid">
       <li>
         <span class="step-num">1</span>
         <h3>Pick your recipes</h3>
-        <p>Choose from our catalogue. One meal for tonight, or a plan for the whole week.</p>
+        <p>Choose from the menu. One meal for tonight, or a plan for the whole week.</p>
       </li>
       <li>
         <span class="step-num">2</span>
@@ -153,70 +150,66 @@
 
   <section id="pricing" class="pricing">
     <div class="section-head">
-      <h2>Order what you want, when you want</h2>
-      <p>One recipe for two. Three recipes for four. Or a whole week for yourself.</p>
+      <h2>Order what you want.</h2>
+      <p>One recipe for two. Three for four. Or a whole week for yourself. No subscription.</p>
     </div>
     <div class="pricing-grid">
       <figure class="weighed">
-        <img src="../assets/photos/weighed.jpg" alt="All ingredients for one recipe, weighed out exactly" loading="lazy">
+        <img src="../assets/photos/weighed.jpg" alt="All ingredients for one recipe, weighed out exactly" width="1000" height="668" loading="lazy">
         <figcaption class="micro">Every ingredient weighed to the gram. Nothing left over.</figcaption>
       </figure>
-      <div class="stat-row">
-        <div class="stat"><span class="stat-num">&euro;4,50</span><span class="stat-label">From, per portion</span></div>
-        <div class="stat"><span class="stat-num">1-12</span><span class="stat-label">People per recipe</span></div>
-        <div class="stat"><span class="stat-num">&euro;0</span><span class="stat-label">Minimum order</span></div>
-        <div class="stat"><span class="stat-num">None</span><span class="stat-label">Subscriptions</span></div>
-      </div>
+      <ul class="stat-list">
+        <li><span class="stat-num">&euro;4,50</span><span class="stat-label">from, per portion</span></li>
+        <li><span class="stat-num">1-12</span><span class="stat-label">people per recipe</span></li>
+        <li><span class="stat-num">&euro;0</span><span class="stat-label">minimum order</span></li>
+      </ul>
     </div>
   </section>
 
-  <section class="partner">
+  <section class="partner on-ink">
     <div class="partner-grid">
       <div class="partner-copy">
-        <p class="eyebrow eyebrow-light">Partner</p>
+        <span class="eyebrow">Partner</span>
         <h2>Together with De Pers, Utrecht</h2>
         <p class="partner-lead">We work with the local supermarket Utrecht already knows. Fresh produce, fair prices, and now your ingredients weighed to order.</p>
         <ul class="tick-list">
-          <li>Local quality, the same produce Utrecht trusts</li>
+          <li>The same fresh produce Utrecht trusts</li>
           <li>Weighed to the gram, not half a kilo of carrots for two</li>
           <li>Pickup at De Pers, whenever suits you</li>
         </ul>
       </div>
       <div class="partner-photo">
-        <img src="../assets/photos/depers.jpg" alt="The De Pers greengrocer and delicatessen storefront in Utrecht" loading="lazy">
+        <img src="../assets/photos/depers.jpg" alt="The De Pers greengrocer and delicatessen storefront in Utrecht" width="1000" height="730" loading="lazy">
       </div>
     </div>
-  </section>
-
-  <section class="fresh">
-    <div class="section-head">
-      <h2>Fresh from De Pers</h2>
+    <div class="fresh">
+      <h3>Fresh from De Pers</h3>
       <p>Only produce that actually tastes good.</p>
-    </div>
-    <div class="fresh-grid">
-      <div class="fresh-item">
-        <img src="../assets/photos/tomato.jpg" alt="Fresh tomato" loading="lazy">
-        <h3>Tomato</h3>
-        <p>Does not taste like water.</p>
-      </div>
-      <div class="fresh-item">
-        <img src="../assets/photos/avocado.jpg" alt="Ripe avocado" loading="lazy">
-        <h3>Avocado</h3>
-        <p>Perfectly ripe. Really.</p>
-      </div>
-      <div class="fresh-item">
-        <img src="../assets/photos/parsley.jpg" alt="Fresh parsley" loading="lazy">
-        <h3>Parsley</h3>
-        <p>Not limp and brown.</p>
+      <div class="fresh-grid">
+        <div class="fresh-item">
+          <img src="../assets/photos/tomato.jpg" alt="Fresh tomato" width="480" height="480" loading="lazy">
+          <h4>Tomato</h4>
+          <p>Does not taste like water.</p>
+        </div>
+        <div class="fresh-item">
+          <img src="../assets/photos/avocado.jpg" alt="Ripe avocado" width="480" height="480" loading="lazy">
+          <h4>Avocado</h4>
+          <p>Perfectly ripe. Really.</p>
+        </div>
+        <div class="fresh-item">
+          <img src="../assets/photos/parsley.jpg" alt="Fresh parsley" width="480" height="480" loading="lazy">
+          <h4>Parsley</h4>
+          <p>Not limp and brown.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="features">
+  <section class="why">
     <div class="section-head">
-      <h2>Why cooks choose Youmechef</h2>
+      <h2>Why Youmechef</h2>
     </div>
-    <div class="feature-grid">
+    <div class="why-grid">
       <article>
         <h3>Stop putting it off</h3>
         <p>Saved posts, open tabs, sticky notes. Now you actually cook it.</p>
@@ -226,41 +219,32 @@
         <p>No wandering the aisles. More time in the kitchen.</p>
       </article>
       <article>
-        <h3>Zero food waste</h3>
-        <p>Exactly what the recipe needs. Nothing rots in the drawer.</p>
-      </article>
-      <article>
-        <h3>Real portions</h3>
-        <p>Set how many people eat. Quantities follow.</p>
-      </article>
-      <article>
-        <h3>Your recipes too</h3>
-        <p>Photo, screenshot, or plain text. We read it and match the ingredients.</p>
-      </article>
-      <article>
-        <h3>Reorder in a tap</h3>
+        <h3>Reorder in one tap</h3>
         <p>Loved that week? Run it again.</p>
       </article>
     </div>
   </section>
 
-  <section id="waitlist" class="waitlist">
-    <h2>Ready to cook something good?</h2>
-    <p>Youmechef is live in Utrecht and rolling out to more cities. Leave your email and we will let you in.</p>
-    <form class="signup" id="signup" data-inbox="ZGF2aWQubW8uYnJpbmlAZ21haWwuY29t" method="POST">
-      <input type="hidden" name="_subject" value="New Youmechef waitlist signup">
-      <input type="hidden" name="_captcha" value="false">
-      <label class="sr-only" for="email">Email address</label>
-      <input id="email" type="email" name="email" placeholder="you@example.com" required autocomplete="email">
-      <button class="btn" type="submit">Join the waitlist</button>
-    </form>
-    <p class="micro">No card needed. Pay only for what you order.</p>
-  </section>
+  <div class="waitlist-wrap">
+    <section id="waitlist" class="waitlist on-ink">
+      <h2>Ready to cook?</h2>
+      <p>Youmechef is in beta in Utrecht. Leave your email and we will let you in.</p>
+      <form class="signup" id="signup" data-inbox="ZGF2aWQubW8uYnJpbmlAZ21haWwuY29t" method="POST">
+        <input type="hidden" name="_subject" value="New Youmechef access request">
+        <input type="hidden" name="_captcha" value="false">
+        <label class="sr-only" for="email">Email address</label>
+        <input id="email" type="email" name="email" placeholder="you@example.com" required autocomplete="email">
+        <button class="btn" type="submit">Request access</button>
+      </form>
+      <p class="micro">No card needed. Pay only for what you order.</p>
+    </section>
+  </div>
 
 </main>
 
 <footer class="footer">
   <p>Youmechef</p>
+  <p class="tagline">You. Me. Chef.</p>
   <p class="micro">Pickup at De Pers, Utrecht. More cities soon.</p>
   <p class="micro"><a href="privacy/">Privacy</a> &middot; <a href="terms/">Terms</a></p>
   <p class="micro">&copy; <span id="year">2026</span> Youmechef. All rights reserved.</p>
