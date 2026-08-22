@@ -643,8 +643,8 @@ img { max-width: 100%; height: auto; }
 }
 .why-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 36px;
 }
 .why-grid article {
   border-top: 1px solid var(--border);
@@ -774,7 +774,7 @@ img { max-width: 100%; height: auto; }
 
 @media (max-width: 1000px) and (min-width: 861px) {
   .recipe-grid,
-  .problem-grid,
+  .problem-grid { grid-template-columns: repeat(2, 1fr); }
   .why-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
