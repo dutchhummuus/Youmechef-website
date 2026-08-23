@@ -33,7 +33,7 @@
       <a href="#how">How it works</a>
       <a href="#pricing">Pricing</a>
       <a class="lang" href="../" hreflang="nl" lang="nl">NL</a>
-      <a class="btn btn-small" href="#waitlist">Request access</a>
+      <a class="btn btn-small" href="#waitlist">Waitlist</a>
     </nav>
   </header>
 
@@ -43,7 +43,7 @@
       <h1>Pick a recipe.<br>Skip the thinking.</h1>
       <p class="lead"><strong>You. Me. Chef.</strong> Pick from our recipes or bring your own. We weigh every ingredient to the gram.</p>
       <div class="cta-row">
-        <a class="btn" href="#waitlist">Request access</a>
+        <a class="btn" href="#waitlist">Join the waitlist</a>
       </div>
       <p class="micro">Local to Utrecht. No minimum. No subscription. From &euro;3,50 per portion.</p>
     </div>
@@ -253,13 +253,19 @@
   <div class="waitlist-wrap">
     <section id="waitlist" class="waitlist on-ink">
       <h2>Ready to cook?</h2>
-      <p>Youmechef is in beta in Utrecht. Leave your email and we will let you in.</p>
-      <form class="signup" id="signup" data-inbox="ZGF2aWQubW8uYnJpbmlAZ21haWwuY29t" method="POST">
-        <input type="hidden" name="_subject" value="New Youmechef access request">
-        <input type="hidden" name="_captcha" value="false">
-        <label class="sr-only" for="email">Email address</label>
-        <input id="email" type="email" name="email" placeholder="you@example.com" required autocomplete="email">
-        <button class="btn" type="submit">Request access</button>
+      <p>Youmechef is in beta in Utrecht and works with a waitlist. Leave your email and we will let you in when there is room.</p>
+      <form class="signup" id="signup" novalidate
+            data-msg-ok="You're on the list. We'll email you when there's room."
+            data-msg-duplicate="You were already on the list. We'll email you when there's room."
+            data-msg-error="That didn't work. Please try again."
+            data-msg-busy="One moment">
+        <div class="signup-fields">
+          <label class="sr-only" for="email">Email address</label>
+          <input id="email" type="email" name="email" placeholder="you@example.com" required autocomplete="email">
+          <label class="hp" aria-hidden="true">Leave this field empty <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+          <button class="btn" type="submit">Join the waitlist</button>
+        </div>
+        <p id="signup-status" class="signup-status" role="status" aria-live="polite" hidden></p>
       </form>
       <p class="micro">No card needed. Pay only for what you order.</p>
     </section>
@@ -278,13 +284,6 @@
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 
-  // Address is base64'd only to keep plain-text scrapers off it, and the action
-  // is set at submit time so it never sits in the served markup.
-  var signup = document.getElementById('signup');
-  signup.addEventListener('submit', function () {
-    signup.action = 'https://formsubmit.co/' + atob(signup.dataset.inbox);
-  });
-
   // Respect reduced-motion: no looping autoplay, hand over manual controls instead.
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     document.querySelectorAll('.insta-video video').forEach(function (v) {
@@ -295,6 +294,7 @@
     });
   }
 </script>
+<script src="../waitlist.js" defer></script>
 
 </body>
 </html>
