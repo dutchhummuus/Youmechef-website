@@ -28,11 +28,16 @@
       <img src="assets/logo.png" alt="" width="36" height="36">
       <span>Youmechef</span>
     </a>
-    <nav>
+    <div class="nav-right">
+      <a class="lang" href="en/" hreflang="en" lang="en">EN</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu openen" data-close-label="Menu sluiten">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav id="site-nav" class="site-nav">
       <a href="#menu">Menu</a>
       <a href="#how">Hoe werkt het</a>
       <a href="#pricing">Prijzen</a>
-      <a class="lang" href="en/" hreflang="en" lang="en">EN</a>
       <a class="btn btn-small" href="#waitlist">Wachtlijst</a>
     </nav>
   </header>
@@ -295,6 +300,7 @@
   }
 </script>
 <script src="waitlist.js" defer></script>
+<script src="nav.js" defer></script>
 
 </body>
 </html>

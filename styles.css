@@ -177,6 +177,41 @@ img { max-width: 100%; height: auto; }
 }
 .nav nav a:not(.btn):not(.lang) { color: var(--on-ink-muted); }
 .nav nav a:not(.btn):not(.lang):hover { color: var(--on-ink); text-decoration: none; }
+
+/* Desktop: brand | links + CTA | language pill + (hidden) hamburger */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  order: 3;
+}
+.site-nav { order: 2; margin-left: auto; margin-right: 20px; }
+.nav-toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  background: transparent;
+  border: 1px solid var(--ink-line);
+  border-radius: 999px;
+  cursor: pointer;
+  position: relative;
+}
+.nav-toggle span {
+  position: absolute;
+  left: 13px;
+  right: 13px;
+  height: 2px;
+  background: var(--on-ink);
+  border-radius: 2px;
+  transition: transform 0.2s ease, opacity 0.2s ease, top 0.2s ease;
+}
+.nav-toggle span:nth-child(1) { top: 15px; }
+.nav-toggle span:nth-child(2) { top: 21px; }
+.nav-toggle span:nth-child(3) { top: 27px; }
+.nav-toggle.is-open span:nth-child(1) { top: 21px; transform: rotate(45deg); }
+.nav-toggle.is-open span:nth-child(2) { opacity: 0; }
+.nav-toggle.is-open span:nth-child(3) { top: 21px; transform: rotate(-45deg); }
 .lang {
   font-size: 12.5px;
   font-weight: 700;
@@ -802,6 +837,44 @@ img { max-width: 100%; height: auto; }
 }
 
 @media (max-width: 860px) {
+  /* Hamburger: the page links drop into a panel, the language pill stays in the bar. */
+  .nav {
+    position: relative;
+    flex-wrap: nowrap;
+    padding: 16px 20px;
+  }
+  .nav-toggle { display: block; }
+  .nav .site-nav {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    z-index: 30;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    margin: 0;
+    padding: 8px 20px 22px;
+    background: var(--ink);
+    border-top: 1px solid var(--ink-line);
+    border-bottom: 1px solid var(--ink-line);
+    box-shadow: 0 24px 40px rgba(0, 0, 0, 0.45);
+  }
+  .nav .site-nav.is-open { display: flex; }
+  .nav .site-nav a:not(.btn) {
+    font-size: 18px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--ink-line);
+    color: var(--on-ink) !important;
+  }
+  .nav .site-nav .btn {
+    margin-top: 18px;
+    text-align: center;
+    padding: 14px 24px;
+    font-size: 16px;
+  }
+
   .hero {
     grid-template-columns: 1fr;
     padding: 36px 24px 72px;
@@ -827,7 +900,6 @@ img { max-width: 100%; height: auto; }
   body { font-size: 16px; }
   .lead { font-size: 18px; }
   .nav { padding: 16px; }
-  .nav nav { gap: 14px; font-size: 14px; }
   .signup input, .signup .btn { flex: 1 1 100%; max-width: none; }
   .recipe-photo { height: 200px; }
 }
