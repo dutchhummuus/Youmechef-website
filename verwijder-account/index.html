@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Youmechef | Account verwijderen</title>
+<meta name="description" content="Zo verwijder je je Youmechef-account en je gegevens.">
+<link rel="icon" href="../assets/favicon.png">
+<link rel="canonical" href="https://dutchhummuus.github.io/Youmechef-website/verwijder-account/">
+<link rel="alternate" hreflang="nl" href="https://dutchhummuus.github.io/Youmechef-website/verwijder-account/">
+<link rel="alternate" hreflang="en" href="https://dutchhummuus.github.io/Youmechef-website/en/delete-account/">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<header class="nav nav-light">
+  <a class="brand" href="../">
+    <img src="../assets/logo.png" alt="" width="36" height="36">
+    <span>Youmechef</span>
+  </a>
+  <nav>
+    <a href="../">Terug naar home</a>
+    <a class="lang" href="../en/delete-account/" hreflang="en" lang="en">EN</a>
+  </nav>
+</header>
+
+<main class="legal">
+  <h1>Account verwijderen</h1>
+  <p class="updated">Laatst bijgewerkt: 28 augustus 2026</p>
+
+  <h2>In de app</h2>
+  <p>Open de Youmechef-app. Ga naar Profiel. Kies Account verwijderen en typ DELETE ter bevestiging. Je account wordt direct verwijderd.</p>
+
+  <h2>Zonder de app</h2>
+  <p><a href="#" class="mailto" data-inbox="ZGF2aWQubW8uYnJpbmlAZ21haWwuY29t">Mail ons</a> vanaf het e-mailadres van je account, met als onderwerp "Account verwijderen". We verwijderen je account binnen 14 dagen en bevestigen dat per mail.</p>
+
+  <h2>Wat we verwijderen</h2>
+  <ul>
+    <li>Je inloggegevens en account</li>
+    <li>Je naam en adressen</li>
+    <li>Je winkelwagen en voorkeuren</li>
+    <li>Je ge&uuml;ploade recepten en foto's</li>
+  </ul>
+  <p>Je e-mailadres komt direct weer vrij voor een nieuw account.</p>
+
+  <h2>Wat we bewaren</h2>
+  <p>Bestellingen en betalingen bewaren we 7 jaar, dat is onze wettelijke administratieplicht. Ze zijn dan geanonimiseerd. Je naam en e-mailadres staan er niet meer bij.</p>
+</main>
+
+<footer class="footer">
+  <p>Youmechef</p>
+  <p class="micro"><a href="../privacy/">Privacy</a> &middot; <a href="../voorwaarden/">Voorwaarden</a></p>
+  <p class="micro">&copy; <span id="year">2026</span> Youmechef. Alle rechten voorbehouden.</p>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  document.querySelectorAll('.mailto').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      location.href = 'mailto:' + atob(a.dataset.inbox);
+    });
+  });
+</script>
+</body>
+</html>
