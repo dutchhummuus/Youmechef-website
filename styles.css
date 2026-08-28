@@ -407,6 +407,18 @@ img { max-width: 100%; height: auto; }
   color: var(--text-muted);
   margin-top: 4px;
 }
+.recipe-price {
+  margin-top: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--green);
+}
+.recipe-price span {
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-left: 6px;
+}
 .recipe-cta {
   display: inline-block;
   margin-top: 10px;
@@ -653,10 +665,10 @@ img { max-width: 100%; height: auto; }
 }
 .fresh-item { text-align: center; }
 .fresh-item img {
-  width: 136px;
-  height: 136px;
+  width: 148px;
+  height: 148px;
   object-fit: cover;
-  border-radius: 50%;
+  border-radius: 22px;
   margin-bottom: 16px;
   box-shadow: 0 14px 30px rgba(0, 0, 0, 0.4);
 }
