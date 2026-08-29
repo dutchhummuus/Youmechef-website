@@ -411,22 +411,13 @@ img { max-width: 100%; height: auto; }
   margin-top: 6px;
   font-size: 16px;
   font-weight: 600;
-  color: var(--green);
+  color: var(--gold);
 }
 .recipe-price span {
   font-weight: 400;
   font-size: 14px;
   color: var(--text-muted);
   margin-left: 6px;
-}
-.recipe-cta {
-  display: inline-block;
-  margin-top: 10px;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--gold);
 }
 .recipe-own {
   border: 1px dashed var(--green-muted);
@@ -446,6 +437,48 @@ img { max-width: 100%; height: auto; }
   max-width: var(--page);
   margin: 0 auto;
   padding: 96px 24px;
+}
+.haveall {
+  max-width: var(--page);
+  margin: 0 auto;
+  padding: 0 24px 96px;
+}
+.haveall-track {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  padding-bottom: 12px;
+  -webkit-overflow-scrolling: touch;
+  /* scrolls by swipe and trackpad, without the bar */
+  scrollbar-width: none;
+}
+.haveall-track::-webkit-scrollbar { display: none; }
+.haveall-img-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 16px;
+  font-family: var(--serif);
+  font-size: 20px;
+  color: var(--green);
+}
+.haveall-item {
+  flex: 0 0 180px;
+  margin: 0;
+  text-align: center;
+}
+.haveall-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 16px;
+  background: var(--gold-tint);
+  border: 1px dashed var(--gold-soft);
+}
+.haveall-item figcaption {
+  margin-top: 12px;
+  font-weight: 600;
+  color: var(--green);
 }
 .insta-grid {
   display: grid;
@@ -903,6 +936,7 @@ img { max-width: 100%; height: auto; }
   .partner-grid, .pricing-grid, .insta-grid { gap: 36px; }
   .insta-video { order: 2; }
   .problem, .recipes, .steps, .pricing, .partner, .why, .insta { padding: 64px 24px; }
+  .haveall { padding: 0 24px 64px; }
   .fresh { margin-top: 56px; padding-top: 44px; }
   .waitlist { padding: 48px 24px; }
   .stat-label { text-align: right; }
