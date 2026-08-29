@@ -306,3 +306,31 @@
 
 </body>
 </html>
+
+  // Phones may block even muted autoplay (low power mode, data saver). Try to
+  // start the demo when it becomes visible, retry on the first touch, and hand
+  // over native controls when the browser keeps refusing.
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches)
+  document.querySelectorAll('.insta-video video').forEach(function (v) {
+    v.muted = true;
+    var kicked = false;
+    function tryPlay() {
+      kicked = true;
+      var p = v.play();
+      if (p && p.catch) p.catch(function () {});
+      setTimeout(function () { if (v.paused) v.controls = true; }, 1200);
+    }
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (entries, obs) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { tryPlay(); obs.disconnect(); }
+        });
+      }, { threshold: 0.2 }).observe(v);
+    } else {
+      tryPlay();
+    }
+    document.addEventListener('touchend', function once() {
+      document.removeEventListener('touchend', once);
+      if (v.paused && kicked) tryPlay();
+    }, { passive: true });
+  });
