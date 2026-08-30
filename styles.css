@@ -473,7 +473,7 @@ img { max-width: 100%; height: auto; }
   height: 180px;
   border-radius: 16px;
   background: var(--gold-tint);
-  border: 1px dashed var(--gold-soft);
+  border: 1px solid var(--border);
 }
 .haveall-item figcaption {
   margin-top: 12px;
