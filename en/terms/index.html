@@ -41,7 +41,7 @@
   <p>You collect your order at De Pers in Utrecht, or have it delivered by bike. Both on Mondays and Fridays. Delivery is currently limited to the Wittevrouwen neighbourhood. Can't make it? Mail us as soon as possible.</p>
 
   <h2>Fresh produce</h2>
-  <p>We work with fresh, perishable produce weighed out just for you. A prepared order can therefore not be withdrawn. Something wrong with your order? <a href="#" class="mailto" data-inbox="ZGF2aWQubW8uYnJpbmlAZ21haWwuY29t">Mail us</a> and we will fix it.</p>
+  <p>We work with fresh, perishable produce weighed out just for you. A prepared order can therefore not be withdrawn. Something wrong with your order? <a href="mailto:hello@youmechef.com">Mail us</a> and we will fix it.</p>
 
   <h2>Allergens</h2>
   <p>Recipes may contain allergens. Always check the labels of the delivered products.</p>
@@ -55,16 +55,12 @@
 
 <footer class="footer">
   <p>Youmechef</p>
-  <p class="micro"><a href="../privacy/">Privacy</a> &middot; <a href="./">Terms</a></p>
+  <p class="micro"><a href="../privacy/">Privacy</a> &middot; <a href="./">Terms</a> &middot; <a href="../support/">Support</a></p>
   <p class="micro">&copy; <span id="year">2026</span> Youmechef. All rights reserved.</p>
 </footer>
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
-  // Address is base64'd to keep plain-text scrapers off it.
-  document.querySelectorAll('.mailto').forEach(function (a) {
-    a.href = 'mailto:' + atob(a.dataset.inbox);
-  });
 </script>
 
 </body>

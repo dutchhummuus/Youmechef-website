@@ -41,7 +41,7 @@
   <p>Je haalt je bestelling op bij De Pers in Utrecht, of laat hem per fiets bezorgen. Beide op maandag en vrijdag. Bezorgen kan nu alleen in de wijk Wittevrouwen. Lukt het niet, mail ons dan zo snel mogelijk.</p>
 
   <h2>Verse producten</h2>
-  <p>We werken met verse, bederfelijke producten die we speciaal voor jou afwegen. Daarom kun je een bereide bestelling niet herroepen. Klopt er iets niet met je bestelling? <a href="#" class="mailto" data-inbox="ZGF2aWQubW8uYnJpbmlAZ21haWwuY29t">Mail ons</a> en we lossen het op.</p>
+  <p>We werken met verse, bederfelijke producten die we speciaal voor jou afwegen. Daarom kun je een bereide bestelling niet herroepen. Klopt er iets niet met je bestelling? <a href="mailto:hello@youmechef.com">Mail ons</a> en we lossen het op.</p>
 
   <h2>Allergenen</h2>
   <p>Recepten kunnen allergenen bevatten. Controleer altijd de etiketten van de geleverde producten.</p>
@@ -55,16 +55,12 @@
 
 <footer class="footer">
   <p>Youmechef</p>
-  <p class="micro"><a href="../privacy/">Privacy</a> &middot; <a href="./">Voorwaarden</a></p>
+  <p class="micro"><a href="../privacy/">Privacy</a> &middot; <a href="./">Voorwaarden</a> &middot; <a href="../support/">Support</a></p>
   <p class="micro">&copy; <span id="year">2026</span> Youmechef. Alle rechten voorbehouden.</p>
 </footer>
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
-  // Address is base64'd to keep plain-text scrapers off it.
-  document.querySelectorAll('.mailto').forEach(function (a) {
-    a.href = 'mailto:' + atob(a.dataset.inbox);
-  });
 </script>
 
 </body>

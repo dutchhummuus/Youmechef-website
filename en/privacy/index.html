@@ -29,7 +29,7 @@
   <p class="updated">Last updated: August 20, 2026</p>
 
   <h2>Who we are</h2>
-  <p>Youmechef is a meal service in Utrecht. Questions about privacy? <a href="#" class="mailto" data-inbox="ZGF2aWQubW8uYnJpbmlAZ21haWwuY29t">Mail us</a>.</p>
+  <p>Youmechef is a meal service in Utrecht. Questions about privacy? <a href="mailto:hello@youmechef.com">Mail us</a>.</p>
 
   <h2>What we collect</h2>
   <p>On this website only your email address, when you join the waitlist. This site uses no cookies, no analytics, and no trackers.</p>
@@ -50,7 +50,7 @@
   <p>Until you unsubscribe or the waitlist closes. After that we delete your address.</p>
 
   <h2>Your rights</h2>
-  <p>You can view, correct, or delete your data. <a href="#" class="mailto" data-inbox="ZGF2aWQubW8uYnJpbmlAZ21haWwuY29t">Mail us</a> and we will sort it out.</p>
+  <p>You can view, correct, or delete your data. <a href="mailto:hello@youmechef.com">Mail us</a> and we will sort it out.</p>
 
   <h2>The app</h2>
   <p>The Youmechef app has its own privacy statement, shown when you create an account.</p>
@@ -61,16 +61,12 @@
 
 <footer class="footer">
   <p>Youmechef</p>
-  <p class="micro"><a href="./">Privacy</a> &middot; <a href="../terms/">Terms</a></p>
+  <p class="micro"><a href="./">Privacy</a> &middot; <a href="../terms/">Terms</a> &middot; <a href="../support/">Support</a></p>
   <p class="micro">&copy; <span id="year">2026</span> Youmechef. All rights reserved.</p>
 </footer>
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
-  // Address is base64'd to keep plain-text scrapers off it.
-  document.querySelectorAll('.mailto').forEach(function (a) {
-    a.href = 'mailto:' + atob(a.dataset.inbox);
-  });
 </script>
 
 </body>

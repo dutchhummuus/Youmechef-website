@@ -29,7 +29,7 @@
   <p class="updated">Laatst bijgewerkt: 20 augustus 2026</p>
 
   <h2>Wie wij zijn</h2>
-  <p>Youmechef is een maaltijd-service in Utrecht. Vragen over privacy? <a href="#" class="mailto" data-inbox="ZGF2aWQubW8uYnJpbmlAZ21haWwuY29t">Mail ons</a>.</p>
+  <p>Youmechef is een maaltijd-service in Utrecht. Vragen over privacy? <a href="mailto:hello@youmechef.com">Mail ons</a>.</p>
 
   <h2>Wat we verzamelen</h2>
   <p>Op deze website alleen je e-mailadres, als je je aanmeldt voor de wachtlijst. Deze site gebruikt geen cookies, geen analytics en geen trackers.</p>
@@ -50,7 +50,7 @@
   <p>Tot je je uitschrijft of tot de wachtlijst sluit. Daarna verwijderen we je adres.</p>
 
   <h2>Jouw rechten</h2>
-  <p>Je mag je gegevens inzien, corrigeren of laten verwijderen. <a href="#" class="mailto" data-inbox="ZGF2aWQubW8uYnJpbmlAZ21haWwuY29t">Mail ons</a> en we regelen het.</p>
+  <p>Je mag je gegevens inzien, corrigeren of laten verwijderen. <a href="mailto:hello@youmechef.com">Mail ons</a> en we regelen het.</p>
 
   <h2>De app</h2>
   <p>De Youmechef-app heeft een eigen privacyverklaring, die zie je bij het aanmaken van een account.</p>
@@ -61,16 +61,12 @@
 
 <footer class="footer">
   <p>Youmechef</p>
-  <p class="micro"><a href="./">Privacy</a> &middot; <a href="../voorwaarden/">Voorwaarden</a></p>
+  <p class="micro"><a href="./">Privacy</a> &middot; <a href="../voorwaarden/">Voorwaarden</a> &middot; <a href="../support/">Support</a></p>
   <p class="micro">&copy; <span id="year">2026</span> Youmechef. Alle rechten voorbehouden.</p>
 </footer>
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
-  // Address is base64'd to keep plain-text scrapers off it.
-  document.querySelectorAll('.mailto').forEach(function (a) {
-    a.href = 'mailto:' + atob(a.dataset.inbox);
-  });
 </script>
 
 </body>
