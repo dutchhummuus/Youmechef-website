@@ -633,6 +633,16 @@ img { max-width: 100%; height: auto; }
   gap: 56px;
   align-items: center;
 }
+.partner-solo {
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: center;
+}
+.partner-solo .tick-list {
+  text-align: left;
+  margin-inline: auto;
+}
+.partner-solo .partner-lead { margin-inline: auto; }
 .partner h2 {
   color: var(--on-ink);
   font-size: clamp(30px, 4.2vw, 44px);
