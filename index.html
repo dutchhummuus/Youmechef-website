@@ -288,8 +288,11 @@
             data-msg-ok="Je staat op de lijst. We mailen je zodra er plek is."
             data-msg-duplicate="Je stond al op de lijst. We mailen je zodra er plek is."
             data-msg-error="Dat lukte even niet. Probeer het nog een keer."
-            data-msg-busy="Even geduld">
+            data-msg-busy="Even geduld"
+            data-msg-name="Vul ook je naam in.">
         <div class="signup-fields">
+          <label class="sr-only" for="name">Naam</label>
+          <input id="name" type="text" name="name" placeholder="Je naam" required autocomplete="name" maxlength="80">
           <label class="sr-only" for="email">E-mailadres</label>
           <input id="email" type="email" name="email" placeholder="jij@voorbeeld.nl" required autocomplete="email">
           <label class="hp" aria-hidden="true">Laat dit veld leeg <input type="text" name="website" tabindex="-1" autocomplete="off"></label>

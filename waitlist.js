@@ -42,6 +42,12 @@
     var email = form.elements.email.value.trim().toLowerCase();
     if (!email) return;
 
+    var name = form.elements.name ? form.elements.name.value.trim().slice(0, 80) : "";
+    if (form.elements.name && !name) {
+      show(msg.msgName, true);
+      return;
+    }
+
     button.disabled = true;
     button.textContent = msg.msgBusy;
     status.hidden = true;
@@ -56,6 +62,7 @@
       },
       body: JSON.stringify({
         email: email,
+        name: name || null,
         locale: document.documentElement.lang || 'nl',
         source: 'website',
       }),

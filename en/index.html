@@ -288,8 +288,11 @@
             data-msg-ok="You're on the list. We'll email you when there's room."
             data-msg-duplicate="You were already on the list. We'll email you when there's room."
             data-msg-error="That didn't work. Please try again."
-            data-msg-busy="One moment">
+            data-msg-busy="One moment"
+            data-msg-name="Please add your name.">
         <div class="signup-fields">
+          <label class="sr-only" for="name">Name</label>
+          <input id="name" type="text" name="name" placeholder="Your name" required autocomplete="name" maxlength="80">
           <label class="sr-only" for="email">Email address</label>
           <input id="email" type="email" name="email" placeholder="you@example.com" required autocomplete="email">
           <label class="hp" aria-hidden="true">Leave this field empty <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
