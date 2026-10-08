@@ -786,6 +786,7 @@ img { max-width: 100%; height: auto; }
 }
 .signup input::placeholder { color: var(--on-ink-muted); }
 .signup input:focus { border-color: var(--gold); }
+.signup-fields[hidden] { display: none; }
 .signup-fields {
   display: flex;
   gap: 10px;
