@@ -1026,3 +1026,27 @@ img { max-width: 100%; height: auto; }
 
 /* standalone recipe index reuses the homepage grid on cream */
 .recipes-standalone { background: transparent; padding-top: 24px; }
+
+/* Store badges (official artwork, do not restyle the images) */
+
+.store-badges {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 6px;
+}
+.store-badges a { display: inline-block; line-height: 0; }
+.store-badges img { display: block; width: auto; }
+.badge-play img { height: 62px; }
+.badge-ios img { height: 50px; }
+/* hidden must win from the flex display, see the waitlist lesson */
+.store-badges [hidden],
+.store-badges a[hidden],
+.badge-soon[hidden] { display: none !important; }
+.badge-soon { align-self: center; }
+
+/* hero variant sits left-aligned under the buttons */
+.hero .store-badges { justify-content: flex-start; margin: 14px 0 0; }
+.hero .badge-soon { color: var(--on-ink-muted); }

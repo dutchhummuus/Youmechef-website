@@ -109,6 +109,7 @@ ${body}
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
+<script src="/badges.js" defer></script>
 
 </body>
 </html>
