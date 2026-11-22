@@ -9,6 +9,7 @@
 import { writeFileSync, mkdirSync, rmSync, existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { recipeArticle, euro, esc } from './recipe-template.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const SUPABASE_URL = 'https://zendompobuoihmfxrfzc.supabase.co';
@@ -17,11 +18,6 @@ const SITE = 'https://www.youmechef.com';
 
 const slugify = (title) =>
   title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
-
-const euro = (n) => '€' + Number(n).toFixed(2).replace('.', ',');
-
-const esc = (s) =>
-  String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
 async function rest(path) {
   const res = await fetch(SUPABASE_URL + '/rest/v1/' + path, {
@@ -60,6 +56,10 @@ const items = recipes
   });
 
 const skipped = recipes.length - items.length;
+
+if (items.length === 0) {
+  throw new Error('no publishable recipes returned, refusing to build an empty catalogue');
+}
 
 // All internal links are absolute from the site root, Netlify serves there.
 function chrome(lang, { title, desc, canonical, altNl, altEn, image, body }) {
@@ -126,26 +126,26 @@ function recipePage(r, lang) {
   const desc = lang === 'nl'
     ? `${r.prepMinutes ? 'Klaar in ' + r.prepMinutes + ' minuten. ' : ''}${pp} per portie, precies afgewogen. Nu in Utrecht.`
     : `${r.prepMinutes ? 'Ready in ' + r.prepMinutes + ' minutes. ' : ''}${pp} per portion, weighed exactly. Now in Utrecht.`;
-  const chips = r.ingredients.map((i) => `<li>${esc(i)}</li>`).join('\n    ');
-  const body = `<main class="recipe-page">
-  <p class="eyebrow">${lang === 'nl' ? 'Recept' : 'Recipe'}</p>
-  <h1>${esc(r.title)}</h1>
-  <p class="recipe-meta-line">${metaParts.join(' &middot; ')}</p>
-  <img class="recipe-hero" src="${esc(r.heroImageUrl)}" alt="${esc(r.title)}" width="1200" height="800">
-
-  <h2>${lang === 'nl' ? 'Wat erin gaat' : 'What goes in'}</h2>
-  <ul class="chips">
-    ${chips}
-  </ul>
-  <p class="micro">${lang === 'nl' ? 'Alle hoeveelheden en stappen staan in de app.' : 'All amounts and steps are in the app.'}</p>
-
-  <div class="recipe-cta-block">
-    <p>${lang === 'nl' ? 'Wij wegen elk ingrediënt precies af. Jij kookt.' : 'We weigh every ingredient exactly. You cook.'}</p>
-    <a class="btn" href="${lang === 'nl' ? '/#waitlist' : '/en/#waitlist'}">${lang === 'nl' ? 'Zet me op de wachtlijst' : 'Join the waitlist'}</a>
-  </div>
-
-  <p class="backlink"><a href="${lang === 'nl' ? '/recepten/' : '/en/recipes/'}">${lang === 'nl' ? 'Alle recepten' : 'All recipes'}</a></p>
-</main>`;
+  const body = '<main class="recipe-page">' + recipeArticle(
+    {
+      title: r.title,
+      imageUrl: r.heroImageUrl,
+      prepMinutes: r.prepMinutes,
+      portions: r.defaultPortions,
+      pricePerPortion: r.latestPrice,
+      items: r.ingredients,
+    },
+    {
+      lang,
+      eyebrow: lang === 'nl' ? 'Recept' : 'Recipe',
+      itemsHeading: lang === 'nl' ? 'Wat erin gaat' : 'What goes in',
+      teaseLine: lang === 'nl' ? 'Alle hoeveelheden en stappen staan in de app.' : 'All amounts and steps are in the app.',
+      ctaText: lang === 'nl' ? 'Zet me op de wachtlijst' : 'Join the waitlist',
+      ctaHref: lang === 'nl' ? '/#waitlist' : '/en/#waitlist',
+      backHref: lang === 'nl' ? '/recepten/' : '/en/recipes/',
+      backText: lang === 'nl' ? 'Alle recepten' : 'All recipes',
+    }
+  ) + '</main>';
   return chrome(lang, {
     title: r.title + ' | Youmechef',
     desc,

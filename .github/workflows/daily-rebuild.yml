@@ -1,0 +1,15 @@
+name: Daily recipe rebuild
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '30 6 * * *'   # daily, after the morning price refresh
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Netlify build hook
+        run: curl -s -X POST "$NETLIFY_BUILD_HOOK" -o /dev/null -w "build hook answered %{http_code}\n"
+        env:
+          NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}

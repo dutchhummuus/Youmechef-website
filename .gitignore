@@ -3,3 +3,7 @@ Thumbs.db
 *.log
 .vscode/
 incoming/
+recepten/
+en/recipes/
+sitemap.xml
+robots.txt

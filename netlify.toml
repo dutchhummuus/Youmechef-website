@@ -1,0 +1,10 @@
+[build]
+  command = "node scripts/build-recipes.mjs"
+  publish = "."
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[[edge_functions]]
+  path = "/r/*"
+  function = "share"
