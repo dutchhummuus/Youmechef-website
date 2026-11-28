@@ -32,7 +32,7 @@ export function storeBadges(lang) {
 // data: { title, imageUrl, prepMinutes?, portions?, pricePerPortion?,
 //         items: [string], sourceUrl? }
 // opts: { lang: 'nl'|'en', eyebrow, itemsHeading, teaseLine?, ctaText,
-//         ctaHref, backHref?, backText? }
+//         ctaHref, ctaLine?, badgeLine?, backHref?, backText? }
 export function recipeArticle(data, opts) {
   const meta = [];
   if (data.prepMinutes) meta.push(data.prepMinutes + ' min');
@@ -58,9 +58,17 @@ export function recipeArticle(data, opts) {
     html += '<p class="micro" style="margin-top: 14px;"><a href="' + esc(data.sourceUrl) + '" rel="noopener nofollow" target="_blank">' +
       (opts.lang === 'nl' ? 'Origineel recept' : 'Original recipe') + '</a></p>';
   }
+  const ctaLine = opts.ctaLine || (opts.lang === 'nl'
+    ? 'Dit recept, afgewogen tot op de gram, thuisbezorgd.'
+    : 'This recipe, weighed to the gram, delivered.');
+  const badgeLine = opts.badgeLine || (opts.lang === 'nl'
+    ? 'Of bekijk het alvast in de app.'
+    : 'Or see it in the app now.');
   html +=
     '<div class="recipe-cta-block">' +
-    '<p>' + esc(opts.ctaLine || (opts.lang === 'nl' ? 'Bestel dit recept in de app.' : 'Order this recipe in the app.')) + '</p>' +
+    '<p>' + esc(ctaLine) + '</p>' +
+    '<p><a class="btn" href="' + esc(opts.ctaHref) + '">' + esc(opts.ctaText) + '</a></p>' +
+    '<p class="micro badge-lead">' + esc(badgeLine) + '</p>' +
     storeBadges(opts.lang) +
     '</div>';
   if (opts.backHref) {

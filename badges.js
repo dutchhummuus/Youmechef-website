@@ -15,6 +15,11 @@ window.applyStoreBadges = function () {
     if (isIOS) {
       if (play) play.hidden = true;
       if (iosLive) { ios.hidden = false; if (soon) soon.hidden = true; }
+      else {
+        // no app to get on iOS yet, so the lead line above would overpromise
+        var lead = b.previousElementSibling;
+        if (lead && lead.classList && lead.classList.contains('badge-lead')) lead.hidden = true;
+      }
     } else if (isAndroid) {
       if (ios) ios.hidden = true;
       if (soon) soon.hidden = true;

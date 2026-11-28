@@ -1050,3 +1050,12 @@ img { max-width: 100%; height: auto; }
 /* hero variant sits left-aligned under the buttons */
 .hero .store-badges { justify-content: flex-start; margin: 14px 0 0; }
 .hero .badge-soon { color: var(--on-ink-muted); }
+.hero .badge-lead { margin: 16px 0 0; }
+.hero .badge-lead + .store-badges { margin-top: 8px; }
+
+/* micro lines inside the CTA block stay small, the serif 20px rule above must not win */
+.recipe-cta-block p.micro {
+  font-family: var(--sans);
+  font-size: 14px;
+  margin-bottom: 6px;
+}
