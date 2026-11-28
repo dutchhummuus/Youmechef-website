@@ -91,14 +91,19 @@
             itemsHeading: 'Ingrediënten',
             ctaText: 'Zet me op de wachtlijst',
             ctaHref: '/#waitlist',
+            ctaLine: 'Wil je dit koken? Wij brengen precies deze ingrediënten.',
+            badgeLine: 'Zet dit recept in je eigen kookboek.',
           }
         );
+        if (window.applyStoreBadges) window.applyStoreBadges();
       })
       .catch(function () {
         document.getElementById('state').textContent = 'Dat lukte even niet. Probeer het nog een keer.';
       });
   }
 </script>
+
+<script src="/badges.js" defer></script>
 
 </body>
 </html>

@@ -11,10 +11,28 @@ export function euro(n) {
   return '€' + Number(n).toFixed(2).replace('.', ',');
 }
 
+
+export const PLAY_URL = 'https://play.google.com/store/apps/details?id=com.youmechef.mobile';
+export const APP_STORE_URL = null; // set when the iOS app is live, badges flip on automatically
+
+export function storeBadges(lang) {
+  const playBadge = lang === 'nl' ? '/assets/badges/google-play-nl.png' : '/assets/badges/google-play-en.png';
+  const appBadge = lang === 'nl' ? '/assets/badges/app-store-nl.svg' : '/assets/badges/app-store-en.svg';
+  const playAlt = lang === 'nl' ? 'Ontdek het op Google Play' : 'Get it on Google Play';
+  const appAlt = lang === 'nl' ? 'Download in de App Store' : 'Download on the App Store';
+  const soon = lang === 'nl' ? 'Binnenkort ook in de App Store.' : 'Coming soon to the App Store.';
+  const hl = lang === 'nl' ? 'nl' : 'en';
+  return '<div class="store-badges" data-store-badges>' +
+    '<a class="badge-play" href="' + PLAY_URL + '&hl=' + hl + '" rel="noopener"><img src="' + playBadge + '" alt="' + playAlt + '" height="62" width="160"></a>' +
+    '<a class="badge-ios"' + (APP_STORE_URL ? ' href="' + APP_STORE_URL + '"' : '') + ' hidden rel="noopener"><img src="' + appBadge + '" alt="' + appAlt + '" height="50" width="150"></a>' +
+    (APP_STORE_URL ? '' : '<p class="micro badge-soon" hidden>' + soon + '</p>') +
+    '</div>';
+}
+
 // data: { title, imageUrl, prepMinutes?, portions?, pricePerPortion?,
 //         items: [string], sourceUrl? }
 // opts: { lang: 'nl'|'en', eyebrow, itemsHeading, teaseLine?, ctaText,
-//         ctaHref, backHref?, backText? }
+//         ctaHref, ctaLine?, badgeLine?, backHref?, backText? }
 export function recipeArticle(data, opts) {
   const meta = [];
   if (data.prepMinutes) meta.push(data.prepMinutes + ' min');
@@ -40,10 +58,18 @@ export function recipeArticle(data, opts) {
     html += '<p class="micro" style="margin-top: 14px;"><a href="' + esc(data.sourceUrl) + '" rel="noopener nofollow" target="_blank">' +
       (opts.lang === 'nl' ? 'Origineel recept' : 'Original recipe') + '</a></p>';
   }
+  const ctaLine = opts.ctaLine || (opts.lang === 'nl'
+    ? 'Dit recept, afgewogen tot op de gram, thuisbezorgd.'
+    : 'This recipe, weighed to the gram, delivered.');
+  const badgeLine = opts.badgeLine || (opts.lang === 'nl'
+    ? 'Of bekijk het alvast in de app.'
+    : 'Or see it in the app now.');
   html +=
     '<div class="recipe-cta-block">' +
-    '<p>' + (opts.lang === 'nl' ? 'Wij wegen elk ingrediënt precies af. Jij kookt.' : 'We weigh every ingredient exactly. You cook.') + '</p>' +
-    '<a class="btn" href="' + esc(opts.ctaHref) + '">' + esc(opts.ctaText) + '</a>' +
+    '<p>' + esc(ctaLine) + '</p>' +
+    '<p><a class="btn" href="' + esc(opts.ctaHref) + '">' + esc(opts.ctaText) + '</a></p>' +
+    '<p class="micro badge-lead">' + esc(badgeLine) + '</p>' +
+    storeBadges(opts.lang) +
     '</div>';
   if (opts.backHref) {
     html += '<p class="backlink"><a href="' + esc(opts.backHref) + '">' + esc(opts.backText) + '</a></p>';
