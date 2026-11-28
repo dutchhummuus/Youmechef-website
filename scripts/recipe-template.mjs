@@ -25,7 +25,7 @@ export function storeBadges(lang) {
   return '<div class="store-badges" data-store-badges>' +
     '<a class="badge-play" href="' + PLAY_URL + '&hl=' + hl + '" rel="noopener"><img src="' + playBadge + '" alt="' + playAlt + '" height="62" width="160"></a>' +
     '<a class="badge-ios"' + (APP_STORE_URL ? ' href="' + APP_STORE_URL + '"' : '') + ' hidden rel="noopener"><img src="' + appBadge + '" alt="' + appAlt + '" height="50" width="150"></a>' +
-    (APP_STORE_URL ? '' : '<p class="micro badge-soon">' + soon + '</p>') +
+    (APP_STORE_URL ? '' : '<p class="micro badge-soon" hidden>' + soon + '</p>') +
     '</div>';
 }
 
